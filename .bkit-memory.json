@@ -1,0 +1,32 @@
+{
+  "version": "1.4.7",
+  "project": "agent-speech-plugin",
+  "currentFeature": "debug-env-setup",
+  "phase": "do",
+  "activeFeatures": ["debug-env-setup"],
+  "updatedAt": "2026-02-13T14:55:00.000Z",
+  "tasks": {
+    "debug-env-setup": {
+      "status": "in_progress",
+      "taskId": "3",
+      "phase": "do"
+    }
+  },
+  "history": [
+    {
+      "action": "plan",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:37:00.000Z"
+    },
+    {
+      "action": "design",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:45:00.000Z"
+    },
+    {
+      "action": "do",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:55:00.000Z"
+    }
+  ]
+}
