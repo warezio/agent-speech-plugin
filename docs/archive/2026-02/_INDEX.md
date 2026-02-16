@@ -74,3 +74,17 @@
 - macOS native TTS using `say` command
 - 11 CLI configuration commands
 - 4 CLI tool adapters (1 full, 3 stubs)
+
+## git-changes-documentation-sync
+
+| Item | Value |
+|------|-------|
+| Archived | 2026-02-16 |
+| Match Rate | 96% |
+| Status | Completed |
+| Path | `docs/archive/2026-02/git-changes-documentation-sync/` |
+
+**Documents**:
+- `git-changes-documentation-sync.plan.md`
+- `git-changes-documentation-sync.design.md`
+- `git-changes-documentation-sync-completion-report.md`

@@ -5,24 +5,31 @@
 
 ## Purpose
 
-This agent is an expert in integrating plugins into various CLI AI tools (Claude Code, OpenCode, Codex-CLI, Gemini-CLI). It understands each tool's plugin API, hook system, and response capture methods to provide integrated solutions.
+This agent is an expert in integrating plugins into various CLI AI tools (Claude Code, OpenCode, Codex-CLI, Gemini-CLI). It understands each tool's plugin API, hook system, and response capture methods to provide integrated solutions. It also specializes in Claude Code's marketplace distribution system for plugin deployment and installation.
 
 ## Expertise
 
 ### Core Knowledge
 
 1. **CLI Tool Plugin Systems**
-   - Claude Code: Skill/Plugin Architecture
+   - Claude Code: Skill/Plugin Architecture + Marketplace Distribution
    - OpenCode: Extension System
    - Codex-CLI: Plugin API
    - Gemini-CLI: Hook/Extension Mechanism
 
-2. **Response Interception**
+2. **Marketplace Distribution**
+   - Claude Code Plugin Marketplace
+   - marketplace.json schema and configuration
+   - Plugin metadata and MCP server setup
+   - Automated installation flow
+   - Version management across metadata files
+
+3. **Response Interception**
    - stdout/stderr interception
    - Stream redirection
    - Hook function registration
 
-3. **Event-Driven Architecture**
+4. **Event-Driven Architecture**
    - Response start/complete events
    - Streaming response processing
    - Asynchronous speech trigger
@@ -337,6 +344,74 @@ function spawnWithSpeech(command: string, args: string[], tts: TextToSpeech) {
 - `src/plugins/registry.ts` - Plugin registry
 - `src/types/index.ts` - Common type definitions
 
+## Marketplace Distribution Implementation
+
+### Claude Code Marketplace Files
+
+```typescript
+// Required marketplace structure:
+interface MarketplaceConfig {
+  name: string;
+  version: string;
+  description: string;
+  owner: { name: string; url: string };
+  plugins: PluginDefinition[];
+}
+
+interface PluginDefinition {
+  name: string;
+  description: string;
+  version: string;
+  author: { name: string; url: string };
+  repository: string;
+  category: string;
+  keywords: string[];
+  mcpServers?: Record<string, MCPServer>;
+}
+
+interface MCPServer {
+  command: string;
+  args: string[];
+  description?: string;
+  env?: Record<string, string>;
+}
+```
+
+### File Structure Requirements
+
+```
+.claude-plugin/
+├── marketplace.json              # Marketplace definition
+└── <plugin-name>/
+    ├── plugin.json              # Plugin metadata
+    ├── .mcp.json                # MCP server configuration
+    └── README.md                # Plugin documentation
+```
+
+### Installation Flow
+
+```bash
+# User adds marketplace
+claude plugin marketplace add <marketplace-name> <github-url>
+
+# User installs plugin
+claude plugin install <plugin-name>
+
+# System operations:
+# 1. Clone repository to ~/.claude/plugins/marketplaces/<name>/
+# 2. Cache plugin to ~/.claude/plugins/cache/<name>/<plugin>/<version>/
+# 3. Register MCP server from cached dist/mcp-server.js
+```
+
+### Version Management
+
+- Must synchronize versions across:
+  - `package.json`
+  - `.claude-plugin/marketplace.json` (version + plugins[0].version)
+  - `.claude-plugin/<plugin>/plugin.json`
+- Use semantic versioning (MAJOR.MINOR.PATCH)
+- Automated release scripts recommended
+
 ## Testing
 
 ```bash
@@ -348,4 +423,8 @@ pnpm test:plugin gemini-cli
 
 # Integration tests
 pnpm test:integration
+
+# Marketplace distribution tests
+./test-marketplace.sh           # Marketplace setup validation
+./test-plugin-installation.sh    # End-to-end installation test
 ```
