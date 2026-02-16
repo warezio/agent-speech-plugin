@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-02-12T21:00:00.000Z",
+  "lastUpdated": "2026-02-13T19:10:00.000Z",
   "activeFeatures": [],
   "primaryFeature": null,
   "features": {
@@ -20,6 +20,23 @@
         "act": "completed",
         "report": "completed"
       }
+    },
+    "debug-env-setup": {
+      "phase": "archived",
+      "level": "N/A",
+      "createdAt": "2026-02-13",
+      "archivedAt": "2026-02-13T19:10:00.000Z",
+      "archivedTo": "docs/archive/2026-02/debug-env-setup",
+      "matchRate": 96,
+      "iterations": 0,
+      "tasks": {
+        "plan": "completed",
+        "design": "completed",
+        "do": "completed",
+        "check": "completed",
+        "act": "completed",
+        "report": "completed"
+      }
     }
   },
   "pipeline": {
@@ -30,7 +47,7 @@
   "session": {
     "startedAt": "2026-02-12T07:48:55.411Z",
     "onboardingCompleted": true,
-    "lastActivity": "2026-02-12T21:00:00.000Z"
+    "lastActivity": "2026-02-13T19:10:00.000Z"
   },
   "history": [
     {
@@ -72,6 +89,36 @@
       "action": "archive",
       "feature": "agent-speech-plugin",
       "timestamp": "2026-02-12T21:00:00.000Z"
+    },
+    {
+      "action": "plan",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:37:00.000Z"
+    },
+    {
+      "action": "design",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:45:00.000Z"
+    },
+    {
+      "action": "do",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T14:55:00.000Z"
+    },
+    {
+      "action": "check",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T19:00:00.000Z"
+    },
+    {
+      "action": "report",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T19:05:00.000Z"
+    },
+    {
+      "action": "archive",
+      "feature": "debug-env-setup",
+      "timestamp": "2026-02-13T19:10:00.000Z"
     }
   ]
 }

@@ -2,6 +2,30 @@
 
 ## Features
 
+### debug-env-setup
+
+| Phase | Document | Status | Date |
+|-------|----------|--------|------|
+| Plan | [debug-env-setup.plan.md](./debug-env-setup/debug-env-setup.plan.md) | ✅ Complete | 2026-02-13 |
+| Design | [debug-env-setup.design.md](./debug-env-setup/debug-env-setup.design.md) | ✅ Complete | 2026-02-13 |
+| Implementation | [debug-env-setup.do.md](./debug-env-setup/debug-env-setup.do.md) | ✅ Complete | 2026-02-13 |
+| Check | [debug-env-setup-gap.md](./debug-env-setup/debug-env-setup-gap.md) | ✅ Complete | 2026-02-13 |
+| Report | [debug-env-setup.report.md](./debug-env-setup/debug-env-setup.report.md) | ✅ Complete | 2026-02-13 |
+
+**Feature**: Debug Environment Setup
+**Description**: Comprehensive debugging and testing environment for the agent-speech-plugin MCP server
+**Level**: N/A (Infrastructure)
+**Match Rate**: 96%
+
+**Key Achievements:**
+- Logger utilities with stderr output and file logging with rotation
+- VS Code debugging configurations (6 debug configs)
+- 64 passing unit tests (100% pass rate)
+- MCP Inspector integration for browser-based debugging
+- Claude Code integration documentation
+
+---
+
 ### agent-speech-plugin
 
 | Phase | Document | Status | Date |
