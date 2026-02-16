@@ -22,6 +22,7 @@
     "dev": "tsc --watch",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit"
   },
@@ -41,9 +42,12 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3",
-    "vitest": "^1.2.0"
+    "vitest": "^4.0.18",
+    "zod": "^4.3.6"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4"
