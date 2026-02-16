@@ -1,0 +1,20 @@
+# Example Claude Code Configuration for agent-speech-plugin
+#
+# Copy this file to: ~/.config/claude-code/config.json
+#
+# IMPORTANT: Update the path in "args" to match your project location!
+
+{
+  "mcpServers": {
+    "agent-speech-dev": {
+      "command": "node",
+      "args": [
+        "/ABSOLUTE/PATH/TO/agent-speech-plugin/dist/mcp-server.js"
+      ],
+      "env": {
+        "DEBUG": "true",
+        "LOG_FILE": "/tmp/agent-speech-debug.log"
+      }
+    }
+  }
+}
