@@ -1,0 +1,23 @@
+# Auto detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Source code
+*.ts text diff=typescript
+*.js text diff=javascript
+*.json text diff=json
+*.md text diff=markdown
+*.yml text diff=yaml
+*.yaml text diff=yaml
+
+# Scripts
+*.sh text eol=lf
+
+# Windows
+*.bat text eol=crlf
+
+# No normalization for files that would break
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary

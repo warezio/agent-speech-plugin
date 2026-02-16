@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "warezio",
+  "version": "0.1.0",
+  "description": "Plugin marketplace by warezio - macOS-native tools for AI CLI development",
+  "owner": {
+    "name": "warezio",
+    "url": "https://github.com/warezio"
+  },
+  "plugins": [
+    {
+      "name": "agent-speech-plugin",
+      "description": "Text-to-speech plugin for AI CLI tools using macOS native say command. Converts Claude Code responses into speech with configurable voice, rate, and volume. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.",
+      "version": "0.1.0",
+      "author": {
+        "name": "warezio",
+        "url": "https://github.com/warezio"
+      },
+      "repository": "https://github.com/warezio/agent-speech-plugin",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/warezio/agent-speech-plugin.git"
+      },
+      "category": "accessibility",
+      "keywords": [
+        "tts",
+        "text-to-speech",
+        "macos",
+        "say",
+        "accessibility",
+        "audio",
+        "voice",
+        "speech",
+        "mcp",
+        "claude-code"
+      ],
+      "homepage": "https://github.com/warezio/agent-speech-plugin#readme"
+    }
+  ]
+}

@@ -2,6 +2,34 @@
 
 All notable changes to the agent-speech-plugin project will be documented in this file.
 
+## [2026-02-15] - Marketplace Distribution Implementation
+
+### Added
+- Complete marketplace distribution system for Claude Code plugin ecosystem
+- Marketplace definition files (.claude-plugin/marketplace.json, plugin.json, .mcp.json)
+- Automated release script (scripts/release.sh) for version management
+- Marketplace validation script (test-marketplace.sh) for local testing
+- Comprehensive marketplace documentation with setup guides
+- Version synchronization across all metadata files
+- User installation guide with marketplace commands
+- Developer maintenance guide with release procedures
+- Troubleshooting section for common marketplace issues
+
+### Changed
+- Updated package.json to include .claude-plugin files in distribution
+- Enhanced project structure to support marketplace deployment
+- Added marketplace testing to quality assurance process
+- Improved documentation with marketplace-specific guides
+- Created automated version bumping across all metadata files
+
+### Fixed
+- Marketplace discovery and installation flow documentation
+- MCP server path configuration for marketplace deployment
+- Version consistency between package.json and marketplace metadata
+- File inclusion in npm package for marketplace distribution
+
+---
+
 ## [2026-02-15] - README Usage Documentation
 
 ### Added

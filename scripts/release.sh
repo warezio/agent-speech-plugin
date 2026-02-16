@@ -1,0 +1,67 @@
+#!/bin/bash
+set -e
+
+# Release script for agent-speech-plugin
+# This script automates the release process for the marketplace
+
+VERSION=$1
+
+if [ -z "$VERSION" ]; then
+  echo "Usage: ./scripts/release.sh <version>"
+  echo "Example: ./scripts/release.sh 0.2.0"
+  exit 1
+fi
+
+# Validate version format (semver)
+if ! [[ $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  echo "Error: Version must be in semantic versioning format (e.g., 0.2.0)"
+  exit 1
+fi
+
+echo "🚀 Releasing agent-speech-plugin v$VERSION"
+
+# Step 1: Update version in package.json
+echo "📦 Updating package.json version to $VERSION"
+npm version "$VERSION" --no-git-tag-version
+
+# Step 2: Update marketplace.json version
+echo "📦 Updating .claude-plugin/marketplace.json version to $VERSION"
+sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/" .claude-plugin/marketplace.json
+
+# Step 3: Update plugin.json version
+echo "📦 Updating .claude-plugin/agent-speech-plugin/plugin.json version to $VERSION"
+sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/" .claude-plugin/agent-speech-plugin/plugin.json
+
+# Step 4: Build the project
+echo "🔨 Building the project"
+pnpm build
+
+# Step 5: Run tests
+echo "🧪 Running tests"
+pnpm test
+
+# Step 6: Commit changes
+echo "💾 Committing version changes"
+git add package.json package-lock.json .claude-plugin/marketplace.json .claude-plugin/agent-speech-plugin/plugin.json
+git commit -m "chore: release v$VERSION"
+
+# Step 7: Create git tag
+echo "🏷️  Creating git tag v$VERSION"
+git tag -a "v$VERSION" -m "Release v$VERSION"
+
+# Step 8: Push to GitHub
+echo "📤 Pushing to GitHub"
+git push
+git push --tags
+
+echo ""
+echo "✅ Release v$VERSION complete!"
+echo ""
+echo "Next steps:"
+echo "1. Create a GitHub release: https://github.com/warezio/agent-speech-plugin/releases/new"
+echo "2. Tag: v$VERSION"
+echo "3. Include the changelog"
+echo ""
+echo "To install from marketplace:"
+echo "  claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin"
+echo "  claude plugin install agent-speech-plugin"

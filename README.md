@@ -32,6 +32,20 @@ A macOS-exclusive plugin that converts AI responses into speech using the built-
 
 Get speech output in under 2 minutes with Claude Code:
 
+### Option A: Install from Marketplace (Recommended)
+
+```bash
+# Add the marketplace and install
+claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin install agent-speech-plugin
+
+# Restart Claude Code
+```
+
+Then test with: **"Say 'Hello World'"**
+
+### Option B: Manual Installation
+
 ### 1. Build the Project
 
 ```bash
@@ -78,7 +92,21 @@ Claude will use the `speak_text` tool to read the response aloud.
 - **Node.js 18+**
 - **Claude Code CLI** (for MCP integration)
 
-### Option 1: Local Development (Recommended)
+### Option 1: Install from Marketplace (Recommended)
+
+Use Claude Code's built-in plugin marketplace:
+
+```bash
+# Add the warezio marketplace
+claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+
+# Install the plugin
+claude plugin install agent-speech-plugin
+```
+
+The plugin will be installed to `~/.claude/plugins/marketplace/warezio/` and automatically configured.
+
+### Option 2: Local Development
 
 ```bash
 # Clone the repository
