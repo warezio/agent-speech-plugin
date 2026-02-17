@@ -26,6 +26,8 @@ import {
   cmdSetVolume,
   cmdListVoices,
   cmdReset,
+  cmdLanguage,
+  cmdMute,
   cmdHelp,
 } from './commands/index.js';
 import { formatError } from './utils/format.js';
@@ -44,6 +46,8 @@ const COMMANDS = [
   'set-volume',
   'list-voices',
   'reset',
+  'language',
+  'mute',
   'help',
   '--help',
   '-h',
@@ -84,6 +88,10 @@ async function main(): Promise<number> {
       return await cmdListVoices();
     case 'reset':
       return await cmdReset();
+    case 'language':
+      return await cmdLanguage();
+    case 'mute':
+      return await cmdMute(commandArgs[0]);
     case 'help':
     case '--help':
     case '-h':

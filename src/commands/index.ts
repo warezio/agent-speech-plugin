@@ -13,4 +13,6 @@ export { cmdSetRate } from './set-rate.js';
 export { cmdSetVolume } from './set-volume.js';
 export { cmdListVoices } from './list-voices.js';
 export { cmdReset } from './reset.js';
+export { cmdLanguage } from './language.js';
+export { cmdMute } from './mute.js';
 export { cmdHelp } from './help.js';

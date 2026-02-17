@@ -56,6 +56,8 @@ export interface AppConfig {
   tools: {
     [toolName: string]: ToolConfig;
   };
+  /** Language setting for i18n */
+  language?: string;
 }
 
 /**
