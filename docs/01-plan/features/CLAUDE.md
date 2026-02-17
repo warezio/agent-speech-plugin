@@ -7,6 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1227 | 8:58 PM | 🟣 | Planned tts-i18n feature for multi-language TTS message translation using Google Translate API | ~335 |
+| #1214 | 8:48 PM | 🟣 | Planned tts-i18n feature for multilingual TTS message support | ~282 |
 | #1205 | 8:34 PM | 🟣 | Completed tts-config feature with centralized configuration system | ~275 |
 | #1200 | 8:32 PM | 🔵 | Completed gap analysis for tts-config feature with 96% match rate | ~311 |
 | #1123 | 8:15 PM | 🔵 | Designed tts-config feature with centralized configuration and intelligent summary extraction | ~265 |
@@ -16,4 +18,14 @@
 | #1061 | 2:20 PM | ✅ | Deleted plugin-hooks-convention PDCA documents from source locations | ~180 |
 | #1038 | 2:08 PM | 🟣 | Planned plugin-hooks-convention feature to align with Claude Code official plugin structure | ~287 |
 | #1021 | 1:53 PM | 🟣 | Archived marketplace-distribution feature documentation | ~215 |
+
+### Feb 17, 2026
+
+| ID | Time | T | Title | Read |
+|----|------|---|-------|------|
+| #1608 | 2:16 PM | ✅ | Created Agent Speech Plugin v1 completion report | ~286 |
+| #1415 | 8:42 AM | ✅ | Created comprehensive design document for CLI interactive commands feature | ~691 |
+| #1411 | 8:33 AM | 🟣 | Planned cli-interactive-commands feature for interactive language selection and mute duration management | ~286 |
+| #1402 | 8:23 AM | ✅ | Archived tts-i18n feature PDCA documentation to docs/archive/2026-02/tts-i18n/ | ~258 |
+| #1373 | 7:21 AM | 🟣 | Completed tts-i18n feature with 93% match rate | ~294 |
 </claude-mem-context>

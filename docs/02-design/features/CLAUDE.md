@@ -7,6 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1310 | 9:58 PM | 🟣 | Completed gap analysis for tts-i18n feature showing 93% match rate | ~279 |
+| #1278 | 9:16 PM | 🟣 | Designed TTS internationalization feature (v0.3.0) | ~256 |
 | #1200 | 8:32 PM | 🔵 | Completed gap analysis for tts-config feature with 96% match rate | ~311 |
 | #1191 | 8:31 PM | 🔵 | Discovered comprehensive tts-config design document with shared configuration loader and first-sentence summary extraction | ~313 |
 | #1123 | 8:15 PM | 🔵 | Designed tts-config feature with centralized configuration and intelligent summary extraction | ~265 |
@@ -19,4 +21,13 @@
 | #1053 | 2:13 PM | 🟣 | Implemented plugin hooks convention following ralph-loop official structure | ~254 |
 | #1042 | 2:10 PM | 🟣 | Designed plugin-hooks-convention refactor to follow official Claude Code plugin standards | ~243 |
 | #1021 | 1:53 PM | 🟣 | Archived marketplace-distribution feature documentation | ~215 |
+
+### Feb 17, 2026
+
+| ID | Time | T | Title | Read |
+|----|------|---|-------|------|
+| #1607 | 2:14 PM | 🔵 | Completed gap analysis for agent-speech skill implementation | ~328 |
+| #1415 | 8:42 AM | ✅ | Created comprehensive design document for CLI interactive commands feature | ~691 |
+| #1402 | 8:23 AM | ✅ | Archived tts-i18n feature PDCA documentation to docs/archive/2026-02/tts-i18n/ | ~258 |
+| #1373 | 7:21 AM | 🟣 | Completed tts-i18n feature with 93% match rate | ~294 |
 </claude-mem-context>

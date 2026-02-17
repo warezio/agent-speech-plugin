@@ -197,3 +197,33 @@
 - `~/.agent-speech/config.json` updated with `"language": "ko"` for Korean TTS
 - 9/9 acceptance criteria passed (100%)
 - Verified: `"The task has been completed."` → `"작업이 완료되었습니다."`
+
+---
+
+## cli-interactive-commands
+
+| Item | Value |
+|------|-------|
+| Archived | 2026-02-17 |
+| Match Rate | 98% |
+| Status | Completed |
+| Path | `docs/archive/2026-02/cli-interactive-commands/` |
+
+**Feature**: CLI Interactive Commands
+**Description**: Language selection and mute functionality for the agent-speech-plugin CLI with interactive menus and persistent state management.
+
+**Documents**:
+- `cli-interactive-commands.plan.md`
+- `cli-interactive-commands.design.md`
+- `cli-interactive-commands.report.md`
+
+**Key Achievements:**
+- `language` command — interactive selection of 8 languages (EN, KO, JA, ZH, ES, FR, DE, IT)
+- `mute [off]` command — 7 duration options (5s, 30s, 1min, 5min, 15min, 1hr, permanent) + cancel
+- `IS_MUTED` guard added to all 5 TTS hooks (permission, subagent, task, notification, stop)
+- Mute state persisted in `~/.agent-speech/mute.json` with automatic expiration/cleanup
+- `status` command shows current language and mute status
+- BSD date parsing for macOS compatibility in duration calculation
+- Error handling for corrupt mute files and expired mutes
+- CLI help documentation updated with new command descriptions
+- TypeScript type safety for all configuration structures
