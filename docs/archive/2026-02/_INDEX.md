@@ -141,3 +141,30 @@
 - python3 dependency removed — pure bash + jq implementation
 - Fixed Stop hook bug: was reading non-existent `response` field; now reads `transcript_path`
 - Non-blocking TTS with `say &` — Claude Code unaffected on TTS failure
+
+---
+
+## tts-config
+
+| Item | Value |
+|------|-------|
+| Archived | 2026-02-16 |
+| Match Rate | 96% |
+| Status | Completed |
+| Path | `docs/archive/2026-02/tts-config/` |
+
+**Feature**: TTS Configuration System
+**Description**: Centralized `~/.agent-speech/config.json` config file with shared `load-config.sh` loader. All 5 hook scripts use user-configurable voice, rate, and volume. Stop hook upgraded to first-sentence summary extraction mode. Korean users can set `"voice": "Yuna"`.
+
+**Documents**:
+- `tts-config.plan.md`
+- `tts-config.design.md`
+- `tts-config.analysis.md`
+- `tts-config.report.md`
+
+**Key Achievements:**
+- `load-config.sh` shared loader — validates voice via `say -v ?`, falls back to Samantha
+- All 5 hooks use `$VOICE`/`$RATE`/`$VOLUME` from config (no more hardcoded values)
+- `first-sentence` summary mode: extracts first complete sentence, fallback to truncate
+- `~/.agent-speech/config.json` created with Yuna Korean voice defaults
+- Invalid voice fallback verified: `say -v ? | grep` approach confirmed working

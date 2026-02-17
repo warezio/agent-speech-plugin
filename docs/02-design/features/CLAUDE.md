@@ -7,6 +7,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1200 | 8:32 PM | 🔵 | Completed gap analysis for tts-config feature with 96% match rate | ~311 |
+| #1191 | 8:31 PM | 🔵 | Discovered comprehensive tts-config design document with shared configuration loader and first-sentence summary extraction | ~313 |
+| #1123 | 8:15 PM | 🔵 | Designed tts-config feature with centralized configuration and intelligent summary extraction | ~265 |
 | #1092 | 2:43 PM | 🟣 | Completed gap analysis for extended-tts-hooks with 99% match rate | ~320 |
 | #1090 | 2:41 PM | 🟣 | Designed extended TTS hooks for four Claude Code event types | ~325 |
 | #1070 | 2:34 PM | 🟣 | Designed extended TTS hooks feature (v0.1.1) | ~297 |

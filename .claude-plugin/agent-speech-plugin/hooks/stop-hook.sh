@@ -4,6 +4,9 @@
 
 set -euo pipefail
 
+# Load user config (voice, rate, volume, summary settings)
+source "$(dirname "$0")/load-config.sh"
+
 # Read hook input from stdin
 HOOK_INPUT=$(cat)
 
@@ -30,14 +33,30 @@ if [[ -z "$LAST_TEXT" ]] || [[ ${#LAST_TEXT} -lt 10 ]]; then
   exit 0
 fi
 
-# Build summary: strip markdown, collapse whitespace, take first ~150 chars
-SUMMARY=$(echo "$LAST_TEXT" | \
+# Step 1: Strip markdown artifacts
+CLEAN=$(echo "$LAST_TEXT" | \
   sed 's/```[^`]*```//g' | \
   sed 's/`[^`]*`//g' | \
   sed 's/[#*_|>]//g' | \
   tr -s ' \n\t' ' ' | \
-  sed 's/^ //' | \
-  cut -c1-180)
+  sed 's/^ //')
+
+# Step 2: Extract summary based on configured mode
+if [[ "$SUMMARY_MODE" == "first-sentence" ]]; then
+  # Extract first complete sentence ending in . ? !
+  SUMMARY=$(echo "$CLEAN" | grep -oP '^[^.?!]*[.?!]' | head -1 || echo "")
+  # Fallback to truncate if no sentence boundary found
+  if [[ -z "$SUMMARY" ]] || [[ ${#SUMMARY} -lt 5 ]]; then
+    SUMMARY="${CLEAN:0:$SUMMARY_MAX_CHARS}"
+  fi
+  # Enforce maxChars ceiling
+  if [[ ${#SUMMARY} -gt $SUMMARY_MAX_CHARS ]]; then
+    SUMMARY="${SUMMARY:0:$SUMMARY_MAX_CHARS}"
+  fi
+else
+  # truncate mode: simple character limit
+  SUMMARY="${CLEAN:0:$SUMMARY_MAX_CHARS}"
+fi
 
 # Skip if summary is too short after cleanup
 if [[ -z "$SUMMARY" ]] || [[ ${#SUMMARY} -lt 5 ]]; then
@@ -45,6 +64,6 @@ if [[ -z "$SUMMARY" ]] || [[ ${#SUMMARY} -lt 5 ]]; then
 fi
 
 # Speak using macOS built-in TTS (background, non-blocking)
-say -v "Samantha" -r 200 "$SUMMARY" &
+say -v "$VOICE" -r "$RATE" "$SUMMARY" &
 
 exit 0

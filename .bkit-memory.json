@@ -1,11 +1,11 @@
 {
   "version": "1.4.8",
   "project": "agent-speech-plugin",
-  "currentFeature": "extended-tts-hooks",
-  "phase": "completed",
-  "matchRate": 99,
-  "activeFeatures": ["extended-tts-hooks"],
-  "updatedAt": "2026-02-16T21:05:00.000Z",
+  "currentFeature": null,
+  "phase": null,
+  "matchRate": null,
+  "activeFeatures": [],
+  "updatedAt": "2026-02-16T21:15:00.000Z",
   "tasks": {
     "plugin-hooks-convention": {
       "status": "archived",
@@ -29,6 +29,12 @@
       "phase": "archived",
       "matchRate": 100,
       "archivedTo": "docs/archive/2026-02/marketplace-distribution"
+    },
+    "tts-config": {
+      "status": "archived",
+      "phase": "archived",
+      "matchRate": 96,
+      "archivedTo": "docs/archive/2026-02/tts-config"
     }
   },
   "history": [
@@ -166,6 +172,40 @@
       "feature": "extended-tts-hooks",
       "timestamp": "2026-02-16T21:05:00.000Z",
       "matchRate": 99
+    },
+    {
+      "action": "plan",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T21:15:00.000Z"
+    },
+    {
+      "action": "design",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T21:30:00.000Z"
+    },
+    {
+      "action": "do",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T21:45:00.000Z"
+    },
+    {
+      "action": "check",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T22:00:00.000Z",
+      "matchRate": 96
+    },
+    {
+      "action": "report",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T22:10:00.000Z",
+      "matchRate": 96
+    },
+    {
+      "action": "archive",
+      "feature": "tts-config",
+      "timestamp": "2026-02-16T22:20:00.000Z",
+      "matchRate": 96,
+      "archivedTo": "docs/archive/2026-02/tts-config"
     }
   ]
 }

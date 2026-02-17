@@ -1,9 +1,11 @@
 #!/bin/bash
 # Agent Speech Plugin — Task Completed Hook
 # Announces task completion via macOS TTS
-# Follows the same pattern as stop-hook.sh (ralph-loop convention)
 
 set -euo pipefail
+
+# Load user config (voice, rate, volume, summary settings)
+source "$(dirname "$0")/load-config.sh"
 
 # Read hook input from stdin
 HOOK_INPUT=$(cat)
@@ -23,6 +25,6 @@ else
 fi
 
 # Speak using macOS built-in TTS (background, non-blocking)
-say -v "Samantha" -r 200 "$MESSAGE" &
+say -v "$VOICE" -r "$RATE" "$MESSAGE" &
 
 exit 0

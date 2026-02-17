@@ -7,6 +7,11 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1205 | 8:34 PM | 🟣 | Completed tts-config feature with centralized configuration system | ~275 |
+| #1200 | 8:32 PM | 🔵 | Completed gap analysis for tts-config feature with 96% match rate | ~311 |
+| #1123 | 8:15 PM | 🔵 | Designed tts-config feature with centralized configuration and intelligent summary extraction | ~265 |
+| #1121 | 8:13 PM | 🔵 | Examined tts-config plan document for TTS configuration | ~226 |
+| #1118 | " | 🟣 | Planned tts-config feature for user-configurable TTS voice, rate, and summary settings | ~303 |
 | #1067 | 2:30 PM | 🟣 | Planned extended-tts-hooks feature for comprehensive Claude Code event coverage | ~267 |
 | #1061 | 2:20 PM | ✅ | Deleted plugin-hooks-convention PDCA documents from source locations | ~180 |
 | #1038 | 2:08 PM | 🟣 | Planned plugin-hooks-convention feature to align with Claude Code official plugin structure | ~287 |

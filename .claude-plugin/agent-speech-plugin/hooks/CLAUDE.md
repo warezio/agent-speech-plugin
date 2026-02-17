@@ -7,6 +7,24 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1207 | 8:34 PM | 🟣 | Completed tts-config feature with 96% match rate | ~254 |
+| #1206 | " | 🟣 | Completed TTS configuration system with 96% match rate | ~271 |
+| #1200 | 8:32 PM | 🔵 | Completed gap analysis for tts-config feature with 96% match rate | ~311 |
+| #1196 | 8:31 PM | 🔵 | Discovered permission-hook.sh loads user configuration | ~186 |
+| #1192 | " | 🟣 | Implemented tts-config feature with configurable voice, rate, and summary settings | ~277 |
+| #1190 | " | 🟣 | Notification hook updated to use config system | ~193 |
+| #1174 | 8:25 PM | 🟣 | Implemented tts-config feature with shared configuration loader | ~259 |
+| #1171 | " | 🔵 | Discovered load-config.sh configuration system for TTS hooks | ~249 |
+| #1168 | 8:24 PM | 🟣 | Improved voice validation in load-config.sh using available voices list | ~219 |
+| #1164 | 8:21 PM | 🟣 | Implemented configuration loading system for TTS settings | ~252 |
+| #1163 | " | 🟣 | Implemented tts-config feature with centralized configuration and shared config loader | ~261 |
+| #1161 | " | 🟣 | Added load-config.sh utility script to hooks directory | ~151 |
+| #1159 | " | 🟣 | Created example configuration file for TTS hooks | ~185 |
+| #1128 | 8:17 PM | 🟣 | Implemented configurable TTS in stop-hook.sh with first-sentence extraction | ~273 |
+| #1127 | " | 🟣 | Implemented configurable TTS settings in notification-hook.sh | ~244 |
+| #1126 | " | 🟣 | Implemented configurable TTS settings in subagent-stop-hook | ~215 |
+| #1125 | " | 🟣 | Implemented shared configuration loader for TTS hooks | ~225 |
+| #1117 | 8:11 PM | 🟣 | Extended TTS hooks implementation completed with four new hook scripts | ~286 |
 | #1108 | 7:50 PM | 🟣 | Implemented four new TTS hook scripts following extended-tts-hooks design | ~251 |
 | #1101 | 2:49 PM | 🟣 | Completed extended-tts-hooks feature with 99% match rate | ~364 |
 | #1100 | 2:48 PM | 🔵 | Completed gap analysis for extended-tts-hooks feature with 99% match rate | ~350 |

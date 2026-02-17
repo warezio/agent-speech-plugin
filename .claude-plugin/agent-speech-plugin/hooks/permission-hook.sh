@@ -1,9 +1,11 @@
 #!/bin/bash
 # Agent Speech Plugin — Permission Request Hook
 # Announces when Claude Code requests tool execution permission via macOS TTS
-# Follows the same pattern as stop-hook.sh (ralph-loop convention)
 
 set -euo pipefail
+
+# Load user config (voice, rate, volume, summary settings)
+source "$(dirname "$0")/load-config.sh"
 
 # Read hook input from stdin
 HOOK_INPUT=$(cat)
@@ -19,6 +21,6 @@ else
 fi
 
 # Speak using macOS built-in TTS (background, non-blocking)
-say -v "Samantha" -r 200 "$MESSAGE" &
+say -v "$VOICE" -r "$RATE" "$MESSAGE" &
 
 exit 0

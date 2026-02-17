@@ -7,6 +7,8 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #1210 | 8:36 PM | 🟣 | Archived tts-config feature with centralized user configuration system | ~246 |
+| #1208 | " | 🔵 | Examined archive index structure for documentation pattern | ~187 |
 | #1059 | 2:20 PM | ✅ | Updated archive index with plugin-hooks-convention entry | ~238 |
 | #1025 | 1:53 PM | ✅ | Verified marketplace-distribution archive completion | ~220 |
 | #1022 | " | ✅ | Updated archive index with marketplace-distribution entry | ~221 |
