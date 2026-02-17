@@ -4,9 +4,14 @@
 
 set -euo pipefail
 
-# Load user config (voice, rate, volume, summary settings, language)
+# Load user config (voice, rate, volume, summary settings, language, mute state)
 source "$(dirname "$0")/load-config.sh"
 source "$(dirname "$0")/translate.sh"
+
+# Skip TTS if muted
+if [[ "$IS_MUTED" == "true" ]]; then
+  exit 0
+fi
 
 # Read hook input from stdin
 HOOK_INPUT=$(cat)

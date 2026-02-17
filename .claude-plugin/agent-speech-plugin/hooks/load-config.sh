@@ -59,3 +59,28 @@ if [[ -f "$CONFIG_PATH" ]]; then
 fi
 
 export VOICE RATE VOLUME SUMMARY_MAX_CHARS SUMMARY_MODE LANGUAGE
+
+# Check mute state
+MUTE_FILE="$HOME/.agent-speech/mute.json"
+IS_MUTED=false
+
+if [[ -f "$MUTE_FILE" ]]; then
+  UNTIL=$(jq -r '.until // empty' "$MUTE_FILE" 2>/dev/null || echo "")
+
+  if [[ -z "$UNTIL" ]]; then
+    IS_MUTED=true  # permanent mute
+  else
+    # BSD date command on macOS
+    NOW=$(date -u +%s)
+    UNTIL_EPOCH=$(date -u -jf "%Y-%m-%dT%H:%M:%S" "${UNTIL%.*}" +%s 2>/dev/null || echo 0)
+
+    if [[ $NOW -lt $UNTIL_EPOCH ]]; then
+      IS_MUTED=true
+    else
+      # Auto-cleanup expired mute
+      rm -f "$MUTE_FILE"
+    fi
+  fi
+fi
+
+export IS_MUTED
