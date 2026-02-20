@@ -19,7 +19,7 @@ export async function cmdSetVoice(voice?: string): Promise<number> {
   const config = new ConfigManager();
   await config.init();
 
-  config.setGlobal('voice', voice);
+  config.set('voice', voice);
   await config.save();
 
   formatSuccess(`Voice set to ${voice}`);

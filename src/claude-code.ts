@@ -1,19 +1,16 @@
 /**
- * Claude Code Adapter
- * Integrates Agent Speech Plugin with Claude Code CLI via MCP
+ * Claude Code Integration
+ * Direct integration with Claude Code via MCP server
  */
 
-import { CLIAdapter } from '../types/index.js';
-import { MCPServer } from '../infrastructure/mcp-server.js';
-import { ConfigManager } from '../core/config.js';
+import { MCPServer } from './infrastructure/mcp-server.js';
+import { ConfigManager } from './core/config.js';
 
 /**
- * Adapter for Claude Code integration
- * Uses MCP server to expose TTS functionality
+ * Claude Code integration class
+ * Manages MCP server and configuration for Claude Code
  */
-export class ClaudeCodeAdapter implements CLIAdapter {
-  readonly name = 'claude-code';
-
+export class ClaudeCodeIntegration {
   private mcpServer: MCPServer;
   private config: ConfigManager;
   private started: boolean = false;
@@ -24,7 +21,7 @@ export class ClaudeCodeAdapter implements CLIAdapter {
   }
 
   /**
-   * Initialize the adapter
+   * Initialize the integration
    */
   async init(): Promise<void> {
     await this.config.init();
@@ -32,7 +29,7 @@ export class ClaudeCodeAdapter implements CLIAdapter {
   }
 
   /**
-   * Start the adapter (MCP server)
+   * Start the MCP server
    */
   async start(): Promise<void> {
     if (this.started) {
@@ -44,7 +41,7 @@ export class ClaudeCodeAdapter implements CLIAdapter {
   }
 
   /**
-   * Stop the adapter
+   * Stop the MCP server
    */
   async stop(): Promise<void> {
     if (!this.started) {
@@ -56,9 +53,9 @@ export class ClaudeCodeAdapter implements CLIAdapter {
   }
 
   /**
-   * Check if adapter is enabled
+   * Check if TTS is enabled
    */
   isEnabled(): boolean {
-    return this.config.isToolEnabled(this.name);
+    return this.config.get('enabled');
   }
 }

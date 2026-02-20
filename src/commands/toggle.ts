@@ -1,29 +1,27 @@
 /**
- * Toggle TTS for a tool command
+ * Toggle TTS command
  */
 
 import { ConfigManager } from '../core/config.js';
-import { formatSuccess } from '../utils/format.js';
+import { formatSuccess, formatInfo } from '../utils/format.js';
 
 /**
- * Supported tools
- */
-const TOOLS = ['claude-code', 'opencode', 'codex-cli', 'gemini-cli'] as const;
-type Tool = (typeof TOOLS)[number];
-
-/**
- * Toggle TTS for a tool
- * @param tool - Tool name (default: claude-code)
+ * Toggle TTS on/off
  * @returns Exit code (0 = success)
  */
-export async function cmdToggle(tool?: string): Promise<number> {
+export async function cmdToggle(): Promise<number> {
   const config = new ConfigManager();
   await config.init();
 
-  const toolName = (tool || 'claude-code') as Tool;
-  const newState = config.toggleTool(toolName);
+  const current = config.get('enabled');
+  const newState = !current;
+  config.set('enabled', newState);
   await config.save();
 
-  formatSuccess(`TTS ${newState ? 'enabled' : 'disabled'} for ${toolName}`);
+  if (newState) {
+    formatSuccess('TTS enabled');
+  } else {
+    formatInfo('TTS disabled');
+  }
   return 0;
 }

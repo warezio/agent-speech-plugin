@@ -16,12 +16,12 @@ export async function cmdInit(): Promise<number> {
   await config.save();
 
   formatSuccess('Configuration initialized at', getUserHome() + '/.agent-speech/config.json');
-  format('Global settings:');
-  const global = config.getGlobal();
-  format('  enabled:', global.enabled);
-  format('  voice:', global.voice);
-  format('  rate:', global.rate);
-  format('  volume:', global.volume);
+  format('Settings:');
+  const settings = config.getAll();
+  format('  enabled:', settings.enabled);
+  format('  voice:', settings.voice);
+  format('  rate:', settings.rate);
+  format('  volume:', settings.volume);
 
   return 0;
 }

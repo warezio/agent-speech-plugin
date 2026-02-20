@@ -4,7 +4,7 @@
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.1
 > **Date**: 2026-02-16
-> **Author**: warezio
+> **Author**: welico
 > **PDCA Phase**: Completed
 > **Match Rate**: 99%
 

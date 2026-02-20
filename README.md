@@ -1,8 +1,8 @@
-# agent-speech-plugin
+# agent-speech
 
-> **Text-to-speech plugin for AI CLI tools (Claude Code, OpenCode, Codex-CLI, Gemini-CLI)**
+> **Text-to-speech plugin for Claude Code**
 > **Platform**: macOS | **Level**: Starter
-> **Repository**: https://github.com/warezio/agent-speech-plugin
+> **Repository**: https://github.com/welico/agent-speech-claude-code
 
 ---
 
@@ -10,14 +10,7 @@
 
 A macOS-exclusive plugin that converts AI responses into speech using the built-in `say` command. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.
 
-### Supported CLI Tools
-
-| Tool | Status | Integration |
-|------|--------|-------------|
-| **Claude Code** | ✅ Available | MCP Server |
-| **OpenCode** | 🚧 Planned | Config Adapter |
-| **Codex-CLI** | 🚧 Planned | OpenAI Functions |
-| **Gemini-CLI** | 🚧 Planned | Google Tools |
+### Key Features
 
 ### Key Features
 
@@ -36,8 +29,8 @@ Get speech output in under 2 minutes with Claude Code:
 
 ```bash
 # Add the marketplace and install
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
-claude plugin install agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-claude-code
+claude plugin install agent-speech
 
 # Restart Claude Code
 ```
@@ -49,8 +42,8 @@ Then test with: **"Say 'Hello World'"**
 ### 1. Build the Project
 
 ```bash
-git clone https://github.com/warezio/agent-speech-plugin.git
-cd agent-speech-plugin
+git clone https://github.com/welico/agent-speech-claude-code.git
+cd agent-speech-claude-code
 pnpm install
 pnpm build
 ```
@@ -64,7 +57,7 @@ Add to `~/.config/claude-code/config.json`:
   "mcpServers": {
     "agent-speech": {
       "command": "node",
-      "args": ["/ABSOLUTE/PATH/TO/agent-speech-plugin/dist/mcp-server.js"]
+      "args": ["/ABSOLUTE/PATH/TO/agent-speech-claude-code/dist/mcp-server.js"]
     }
   }
 }
@@ -97,21 +90,21 @@ Claude will use the `speak_text` tool to read the response aloud.
 Use Claude Code's built-in plugin marketplace:
 
 ```bash
-# Add the warezio marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+# Add the welico marketplace
+claude plugin marketplace add welico https://github.com/welico/agent-speech-claude-code
 
 # Install the plugin
-claude plugin install agent-speech-plugin
+claude plugin install agent-speech
 ```
 
-The plugin will be installed to `~/.claude/plugins/marketplace/warezio/` and automatically configured.
+The plugin will be installed to `~/.claude/plugins/marketplace/welico/` and automatically configured.
 
 ### Option 2: Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/warezio/agent-speech-plugin.git
-cd agent-speech-plugin
+git clone https://github.com/welico/agent-speech-claude-code.git
+cd agent-speech-claude-code
 
 # Install dependencies
 pnpm install
@@ -120,10 +113,10 @@ pnpm install
 pnpm build
 ```
 
-### Option 2: Global Install (via npm)
+### Option 3: Global Install (via npm)
 
 ```bash
-npm install -g agent-speech-plugin
+npm install -g agent-speech
 ```
 
 ### Verify Installation
@@ -180,13 +173,7 @@ Configuration is stored at: `~/.agent-speech/config.json`
   "rate": 200,
   "volume": 50,
   "minLength": 10,
-  "filterSensitive": false,
-  "tools": {
-    "claude-code": {
-      "enabled": true,
-      "voice": "Samantha"
-    }
-  }
+  "filterSensitive": false
 }
 ```
 
@@ -256,11 +243,10 @@ agent-speech init
 
 #### `agent-speech enable [tool]`
 
-Enable TTS. Optionally specify a tool (default: claude-code).
+Enable TTS.
 
 ```bash
-agent-speech enable           # Enable globally
-agent-speech enable opencode  # Enable for opencode
+agent-speech enable           # Enable for Claude Code
 ```
 
 #### `agent-speech disable [tool]`
@@ -424,7 +410,7 @@ tail -f /tmp/agent-speech-debug.log
 ### Project Structure
 
 ```
-agent-speech-plugin/
+agent-speech/
 ├── src/
 │   ├── core/              # Core TTS logic
 │   │   ├── tts.ts         # Text-to-speech implementation
@@ -436,9 +422,6 @@ agent-speech-plugin/
 │   │   └── fs.ts          # File system operations
 │   ├── adapters/          # CLI tool adapters
 │   │   ├── claude-code.ts # Claude Code adapter (MCP)
-│   │   ├── opencode.ts    # OpenCode adapter (stub)
-│   │   ├── codex-cli.ts   # Codex-CLI adapter (stub)
-│   │   ├── gemini-cli.ts  # Gemini-CLI adapter (stub)
 │   │   └── registry.ts    # Adapter registry
 │   ├── commands/          # CLI commands
 │   │   ├── init.ts
@@ -525,7 +508,7 @@ agent-speech set-voice Samantha  # Use exact name from list
 
 1. Check debug logs: `tail -f /tmp/agent-speech-debug.log`
 2. Run tests: `pnpm test`
-3. Open an issue on [GitHub](https://github.com/warezio/agent-speech-plugin/issues)
+3. Open an issue on [GitHub](https://github.com/welico/agent-speech-claude-code/issues)
 
 ---
 
@@ -563,4 +546,4 @@ MIT
 
 ---
 
-**Status**: Active Development | **Version**: 0.1.0
+**Status**: Active Development | **Version**: 0.2.0

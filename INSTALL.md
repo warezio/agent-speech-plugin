@@ -5,8 +5,8 @@
 ### Step 1: Clone and Build
 
 ```bash
-git clone https://github.com/warezio/agent-speech-plugin.git
-cd agent-speech-plugin
+git clone https://github.com/welico/agent-speech-claude-code.git
+cd agent-speech-claude-code
 npm install
 npm run build
 ```
@@ -20,7 +20,7 @@ Create or edit `~/.claude/mcp.json`:
   "mcpServers": {
     "agent-speech": {
       "command": "node",
-      "args": ["/ABSOLUTE/PATH/TO/agent-speech-plugin/dist/mcp-server.js"]
+      "args": ["/ABSOLUTE/PATH/TO/agent-speech-claude-code/dist/mcp-server.js"]
     }
   }
 }
@@ -38,7 +38,7 @@ Example:
   "mcpServers": {
     "agent-speech": {
       "command": "node",
-      "args": ["/Users/warezio/Git/GitHub/warezio/agent-speech-plugin/dist/mcp-server.js"]
+      "args": ["/Users/welico/Git/GitHub/welico/agent-speech-claude-code/dist/mcp-server.js"]
     }
   }
 }
@@ -164,7 +164,7 @@ Configuration is stored in `~/.agent-speech/config.json`:
 If Claude Code can't find the MCP server:
 
 1. Check the path in `~/.claude/mcp.json` is absolute
-2. Verify the file exists: `ls /path/to/agent-speech-plugin/dist/mcp-server.js`
+2. Verify the file exists: `ls /path/to/agent-speech-claude-code/dist/mcp-server.js`
 3. Restart Claude Code
 
 ### No Audio Output
@@ -190,7 +190,7 @@ If Claude Code can't find the MCP server:
 rm -rf ~/.agent-speech
 
 # Remove source code (optional)
-cd .. && rm -rf agent-speech-plugin
+cd .. && rm -rf agent-speech-claude-code
 ```
 
 ## Next Steps

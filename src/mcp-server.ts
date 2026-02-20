@@ -3,26 +3,19 @@
  * This file is executed by Claude Code when the MCP server is registered
  */
 
-import { AdapterRegistry } from './adapters/registry.js';
+import { ClaudeCodeIntegration } from './claude-code.js';
 
 /**
  * Main entry point for MCP server
  * Called via: node dist/mcp-server.js
  */
 async function main(): Promise<void> {
-  const registry = new AdapterRegistry();
-  await registry.initAll();
-
-  // Get the Claude Code adapter and start it
-  const claudeCodeAdapter = registry.get('claude-code');
-  if (!claudeCodeAdapter) {
-    console.error('[MCP] Claude Code adapter not found');
-    process.exit(1);
-  }
+  const integration = new ClaudeCodeIntegration();
+  await integration.init();
 
   // Handle shutdown gracefully
   const shutdown = async () => {
-    await registry.stopAll();
+    await integration.stop();
     process.exit(0);
   };
 
@@ -30,7 +23,7 @@ async function main(): Promise<void> {
   process.on('SIGTERM', shutdown);
 
   // Start the server (blocks until killed)
-  await claudeCodeAdapter.start();
+  await integration.start();
 }
 
 // Start the server

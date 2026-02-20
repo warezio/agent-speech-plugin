@@ -25,7 +25,7 @@ export async function cmdSetRate(rate?: string): Promise<number> {
   const config = new ConfigManager();
   await config.init();
 
-  config.setGlobal('rate', rateNum);
+  config.set('rate', rateNum);
   await config.save();
 
   formatSuccess(`Speech rate set to ${rateNum} WPM`);

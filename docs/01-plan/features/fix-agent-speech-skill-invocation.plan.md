@@ -9,7 +9,7 @@ When typing `/agent-speech` in the Claude Code input box, no commands appear or 
 ### Issue 1: Skills in Wrong Location
 - Created: `~/.claude-plugin/agent-speech-plugin/skills/agent-speech/SKILL.md`
 - Expected: `{installPath}/skills/agent-speech/SKILL.md`
-- Actual installPath: `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/`
+- Actual installPath: `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/`
 - The `~/.claude-plugin/` directory is NOT where Claude Code reads plugin skills
 
 ### Issue 2: Wrong SKILL.md Format
@@ -26,7 +26,7 @@ When typing `/agent-speech` in the Claude Code input box, no commands appear or 
 
 ### Short-term Fix (No Reinstall Required)
 1. Create `skills/agent-speech/SKILL.md` at **repo root** with proper Claude Code format
-2. Copy to plugin cache: `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/skills/`
+2. Copy to plugin cache: `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/skills/`
 3. Restart Claude Code → skill appears as `/agent-speech-plugin:agent-speech [command]`
 
 ### Long-term Fix (Better UX, Requires Reinstall)
@@ -41,7 +41,7 @@ When typing `/agent-speech` in the Claude Code input box, no commands appear or 
 - Content: All 13 commands documented with arguments and execution via Bash
 
 ### Phase 2: Copy to Plugin Cache
-- Destination: `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/skills/agent-speech/SKILL.md`
+- Destination: `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/skills/agent-speech/SKILL.md`
 - Immediate effect without reinstall
 
 ### Phase 3: Update Plugin Repository Structure

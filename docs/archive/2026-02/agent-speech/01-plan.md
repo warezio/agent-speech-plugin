@@ -5,7 +5,7 @@ description: PDCA Plan phase document for Agent Speech Plugin
 variables:
   - feature: Agent Speech Plugin
   - date: 2026-02-12
-  - author: warezio
+  - author: welico
   - project: agent-speech-plugin
   - version: 0.1.0
 ---
@@ -16,7 +16,7 @@ variables:
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-12
 > **Status**: Draft
 
@@ -225,4 +225,4 @@ Check which conventions already exist in the project:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-12 | Initial draft | warezio |
+| 0.1 | 2026-02-12 | Initial draft | welico |

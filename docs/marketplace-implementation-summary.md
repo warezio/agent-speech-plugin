@@ -58,7 +58,7 @@ All marketplace infrastructure has been created and configured.
 
 ```bash
 # Add marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 
 # Install plugin
 claude plugin install agent-speech-plugin
@@ -68,11 +68,11 @@ claude plugin install agent-speech-plugin
 
 ```
 User Command:
-  claude plugin marketplace add warezio <github-url>
+  claude plugin marketplace add welico <github-url>
                     │
                     ▼
 Claude clones to:
-  ~/.claude/plugins/marketplaces/warezio/
+  ~/.claude/plugins/marketplaces/welico/
                     │
                     ▼
 User Command:
@@ -80,11 +80,11 @@ User Command:
                     │
                     ▼
 Plugin cached at:
-  ~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/
+  ~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/
                     │
                     ▼
 MCP server configured:
-  ~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/dist/mcp-server.js
+  ~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/dist/mcp-server.js
 ```
 
 ## Marketplace URL
@@ -92,7 +92,7 @@ MCP server configured:
 The marketplace can be added with:
 
 ```bash
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 ```
 
 ## Publishing a Release
@@ -141,7 +141,7 @@ Keep these versions synchronized:
 
 1. **Test local marketplace installation**:
    ```bash
-   claude plugin marketplace add warezio-test file:///path/to/agent-speech-plugin
+   claude plugin marketplace add welico-test file:///path/to/agent-speech-plugin
    claude plugin install agent-speech-plugin
    ```
 

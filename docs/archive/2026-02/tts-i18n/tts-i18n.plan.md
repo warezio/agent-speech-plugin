@@ -2,9 +2,9 @@
 
 > **Summary**: Google Translate 무료 비공식 API를 사용하여 모든 TTS 메세지를 사용자 설정 언어로 번역 후 음성 안내한다. 오프라인 폴백으로 원문 그대로 읽는다.
 >
-> **Project**: agent-speech-plugin
+> **Project**: agent-speech-claude-code
 > **Version**: 0.3.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Status**: Draft
 

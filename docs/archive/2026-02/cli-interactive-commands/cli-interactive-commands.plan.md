@@ -144,7 +144,7 @@ if [[ "$IS_MUTED" == "true" ]]; then exit 0; fi
 - All 5 hook scripts — add `if [[ "$IS_MUTED" == "true" ]]; then exit 0; fi`
 
 ### Plugin cache sync
-- Copy updated hooks to `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/.claude-plugin/`
+- Copy updated hooks to `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/.claude-plugin/`
 
 ---
 

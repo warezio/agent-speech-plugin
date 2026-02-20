@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-13
 > **Status**: In Progress
 > **Design Doc**: [debug-env-setup.design.md](../02-design/features/debug-env-setup.design.md)
@@ -818,4 +818,4 @@ pnpm test
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-13 | Initial implementation guide | warezio |
+| 0.1 | 2026-02-13 | Initial implementation guide | welico |

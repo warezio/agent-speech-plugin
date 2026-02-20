@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Status**: Draft
 > **Planning Doc**: [plugin-hooks-convention.plan.md](../01-plan/features/plugin-hooks-convention.plan.md)
@@ -147,7 +147,7 @@ exit 0
       "hooks": [
         {
           "type": "command",
-          "command": "/Users/warezio/.claude/claude-tts.sh"
+          "command": "/Users/welico/.claude/claude-tts.sh"
         }
       ]
     }
@@ -206,4 +206,4 @@ exit 0
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-16 | Initial draft | warezio |
+| 0.1 | 2026-02-16 | Initial draft | welico |

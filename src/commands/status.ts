@@ -9,11 +9,6 @@ import { existsSync } from 'fs';
 import { promises } from 'fs';
 
 /**
- * Supported tools
- */
-const TOOLS = ['claude-code', 'opencode', 'codex-cli', 'gemini-cli'] as const;
-
-/**
  * Show configuration status
  * @returns Exit code (0 = success)
  */
@@ -25,25 +20,18 @@ export async function cmdStatus(): Promise<number> {
   format('  version:', config.getVersion());
   format('');
 
-  format('Global settings:');
-  const global = config.getGlobal();
-  format('  enabled:', global.enabled);
-  format('  voice:', global.voice);
-  format('  rate:', global.rate, 'WPM');
-  format('  volume:', global.volume);
-  format('  min length:', global.minLength);
-  format('  max length:', global.maxLength || 'unlimited');
+  format('Settings:');
+  const settings = config.getAll();
+  format('  enabled:', settings.enabled);
+  format('  voice:', settings.voice);
+  format('  rate:', settings.rate, 'WPM');
+  format('  volume:', settings.volume);
+  format('  min length:', settings.minLength);
+  format('  max length:', settings.maxLength || 'unlimited');
   format('  filters:');
-  format('    sensitive:', global.filters.sensitive);
-  format('    skipCodeBlocks:', global.filters.skipCodeBlocks);
-  format('    skipCommands:', global.filters.skipCommands);
-  format('');
-
-  format('Tool status:');
-  for (const tool of TOOLS) {
-    const enabled = config.isToolEnabled(tool);
-    formatListItem(`${tool}: ${enabled ? 'enabled' : 'disabled'}`, enabled);
-  }
+  format('    sensitive:', settings.filters.sensitive);
+  format('    skipCodeBlocks:', settings.filters.skipCodeBlocks);
+  format('    skipCommands:', settings.filters.skipCommands);
   format('');
 
   // Show mute status

@@ -17,7 +17,7 @@ describe('ConfigManager', () => {
   beforeEach(async () => {
     // Clean up any existing config to start fresh
     const configPaths = [
-      '/Users/warezio/.agent-speech/config.json',
+      '/Users/welico/.agent-speech/config.json',
       process.env.HOME + '/.agent-speech/config.json',
     ];
 

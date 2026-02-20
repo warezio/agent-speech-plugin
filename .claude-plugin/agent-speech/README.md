@@ -17,8 +17,8 @@ Convert Claude Code responses into speech with configurable voice, rate, and vol
 ### Installation via Marketplace
 
 ```bash
-# Install from warezio marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+# Install from welico marketplace
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 claude plugin install agent-speech-plugin
 ```
 
@@ -26,7 +26,7 @@ claude plugin install agent-speech-plugin
 
 1. Clone and build:
 ```bash
-git clone https://github.com/warezio/agent-speech-plugin.git
+git clone https://github.com/welico/agent-speech-plugin.git
 cd agent-speech-plugin
 pnpm install
 pnpm build
@@ -110,6 +110,6 @@ MIT License - see LICENSE file for details
 
 ## Links
 
-- [Repository](https://github.com/warezio/agent-speech-plugin)
-- [Issues](https://github.com/warezio/agent-speech-plugin/issues)
-- [Documentation](https://github.com/warezio/agent-speech-plugin#readme)
+- [Repository](https://github.com/welico/agent-speech-plugin)
+- [Issues](https://github.com/welico/agent-speech-plugin/issues)
+- [Documentation](https://github.com/welico/agent-speech-plugin#readme)

@@ -73,12 +73,12 @@ agent-speech-plugin/                           # Repository root
 ```json
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "warezio",
+  "name": "welico",
   "version": "0.1.0",
-  "description": "Plugin marketplace by warezio",
+  "description": "Plugin marketplace by welico",
   "owner": {
-    "name": "warezio",
-    "url": "https://github.com/warezio"
+    "name": "welico",
+    "url": "https://github.com/welico"
   },
   "plugins": [
     {
@@ -86,13 +86,13 @@ agent-speech-plugin/                           # Repository root
       "description": "...",
       "version": "0.1.0",
       "author": {
-        "name": "warezio",
-        "url": "https://github.com/warezio"
+        "name": "welico",
+        "url": "https://github.com/welico"
       },
       "repository": "...",
       "source": {
         "source": "url",
-        "url": "https://github.com/warezio/agent-speech-plugin.git"
+        "url": "https://github.com/welico/agent-speech-plugin.git"
       },
       "category": "accessibility",
       "keywords": ["tts", "text-to-speech", "macos"]
@@ -108,9 +108,9 @@ agent-speech-plugin/                           # Repository root
   "description": "...",
   "version": "0.1.0",
   "author": {
-    "name": "warezio",
-    "email": "warezio@users.noreply.github.com",
-    "url": "https://github.com/warezio"
+    "name": "welico",
+    "email": "welico@users.noreply.github.com",
+    "url": "https://github.com/welico"
   },
   "license": "MIT",
   "repository": "...",
@@ -204,7 +204,7 @@ VERSION=$1
 #### 2.5.1 User Commands
 ```bash
 # Step 1: Add marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 
 # Step 2: Install plugin
 claude plugin install agent-speech-plugin
@@ -215,9 +215,9 @@ cp config/config.example.json ~/.agent-speech/config.json
 ```
 
 #### 2.5.2 System Operations
-1. **Marketplace Addition**: Claude Code clones repository to `~/.claude/plugins/marketplaces/warezio/`
-2. **Plugin Installation**: Plugin is cached to `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/`
-3. **MCP Server Registration**: Path registered as `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
+1. **Marketplace Addition**: Claude Code clones repository to `~/.claude/plugins/marketplaces/welico/`
+2. **Plugin Installation**: Plugin is cached to `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/`
+3. **MCP Server Registration**: Path registered as `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
 
 ---
 

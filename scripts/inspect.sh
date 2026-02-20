@@ -1,5 +1,5 @@
 #!/bin/bash
-# MCP Inspector launcher for agent-speech-plugin
+# MCP Inspector launcher for agent-speech-claude-code
 #
 # This script launches the MCP Inspector, a browser-based debugging tool
 # for Model Context Protocol servers. It allows you to:
@@ -13,7 +13,7 @@
 set -e
 
 echo "======================================"
-echo "  MCP Inspector - agent-speech-plugin"
+echo "  MCP Inspector - agent-speech-claude-code"
 echo "======================================"
 echo ""
 echo "Available tools:"

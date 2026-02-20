@@ -2,7 +2,7 @@
 
 > **Feature**: tts-config
 > **Version**: 0.2.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Match Rate**: 96%
 > **Status**: Completed

@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.2.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Status**: Draft
 

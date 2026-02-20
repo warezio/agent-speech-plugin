@@ -24,11 +24,11 @@ agent-speech-plugin/                    # Plugin repository
 
 ### Marketplace Installation Flow
 
-1. User adds marketplace: `claude plugin marketplace add warezio <url>`
-2. Claude clones repo to: `~/.claude/plugins/marketplaces/warezio/`
+1. User adds marketplace: `claude plugin marketplace add welico <url>`
+2. Claude clones repo to: `~/.claude/plugins/marketplaces/welico/`
 3. User installs plugin: `claude plugin install agent-speech-plugin`
-4. Plugin is cached at: `~/.claude/plugins/cache/warezio/agent-speech-plugin/<version>/`
-5. MCP server path becomes: `~/.claude/plugins/cache/warezio/agent-speech-plugin/<version>/dist/mcp-server.js`
+4. Plugin is cached at: `~/.claude/plugins/cache/welico/agent-speech-plugin/<version>/`
+5. MCP server path becomes: `~/.claude/plugins/cache/welico/agent-speech-plugin/<version>/dist/mcp-server.js`
 
 ## Setting Up Your Marketplace
 
@@ -39,12 +39,12 @@ Located at `.claude-plugin/marketplace.json`:
 ```json
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "warezio",
+  "name": "welico",
   "version": "0.1.0",
-  "description": "Plugin marketplace by warezio",
+  "description": "Plugin marketplace by welico",
   "owner": {
-    "name": "warezio",
-    "url": "https://github.com/warezio"
+    "name": "welico",
+    "url": "https://github.com/welico"
   },
   "plugins": [
     {
@@ -52,13 +52,13 @@ Located at `.claude-plugin/marketplace.json`:
       "description": "Text-to-speech plugin...",
       "version": "0.1.0",
       "author": {
-        "name": "warezio",
-        "url": "https://github.com/warezio"
+        "name": "welico",
+        "url": "https://github.com/welico"
       },
-      "repository": "https://github.com/warezio/agent-speech-plugin",
+      "repository": "https://github.com/welico/agent-speech-plugin",
       "source": {
         "source": "url",
-        "url": "https://github.com/warezio/agent-speech-plugin.git"
+        "url": "https://github.com/welico/agent-speech-plugin.git"
       },
       "category": "accessibility",
       "keywords": ["tts", "text-to-speech", "macos"]
@@ -77,7 +77,7 @@ Located at `.claude-plugin/agent-speech-plugin/plugin.json`:
   "description": "...",
   "version": "0.1.0",
   "author": {
-    "name": "warezio"
+    "name": "welico"
   },
   "mcpServers": {
     "agent-speech": {
@@ -130,7 +130,7 @@ git push origin v0.1.0
 Users can now install:
 
 ```bash
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 claude plugin install agent-speech-plugin
 ```
 
@@ -143,7 +143,7 @@ The marketplace repository IS the plugin repository. This is simplest for single
 ```json
 "source": {
   "source": "url",
-  "url": "https://github.com/warezio/agent-speech-plugin.git"
+  "url": "https://github.com/welico/agent-speech-plugin.git"
 }
 ```
 
@@ -152,7 +152,7 @@ The marketplace repository IS the plugin repository. This is simplest for single
 For multiple plugins, create a separate marketplace repository:
 
 ```
-warezio-claude-plugins/
+welico-claude-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── plugins/
@@ -168,7 +168,7 @@ Then in marketplace.json:
     "name": "agent-speech-plugin",
     "source": {
       "source": "url",
-      "url": "https://github.com/warezio/agent-speech-plugin.git"
+      "url": "https://github.com/welico/agent-speech-plugin.git"
     }
   }
 ]
@@ -180,7 +180,7 @@ Test your marketplace before publishing:
 
 ```bash
 # Create a test marketplace entry
-claude plugin marketplace add warezio-test file:///path/to/agent-speech-plugin
+claude plugin marketplace add welico-test file:///path/to/agent-speech-plugin
 
 # Install plugin from test marketplace
 claude plugin install agent-speech-plugin

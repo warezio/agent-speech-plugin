@@ -4,7 +4,7 @@
 > **Project**: agent-speech-plugin
 > **Date**: 2026-02-13
 > **Status**: Plan
-> **Author**: warezio
+> **Author**: welico
 
 ---
 
@@ -243,4 +243,4 @@ Create comprehensive usage documentation in README.md covering:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-13 | Initial plan | warezio |
+| 0.1 | 2026-02-13 | Initial plan | welico |

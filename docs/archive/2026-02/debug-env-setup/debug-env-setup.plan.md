@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-13
 > **Status**: Draft
 
@@ -27,7 +27,7 @@ Claude Code plugins are implemented as MCP (Model Context Protocol) servers. Dev
 ### 1.3 Related Documents
 
 - MCP Specification: https://modelcontextprotocol.io/
-- agent-speech-plugin CLAUDE.md: `/Users/warezio/Git/GitHub/warezio/agent-speech-plugin/CLAUDE.md`
+- agent-speech-plugin CLAUDE.md: `/Users/welico/Git/GitHub/welico/agent-speech-plugin/CLAUDE.md`
 - Archived PDCA documents: `docs/archive/2026-02/agent-speech-plugin/`
 
 ---
@@ -268,4 +268,4 @@ This is a focused debugging environment task, not following the full 9-phase pip
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-13 | Initial draft | warezio |
+| 0.1 | 2026-02-13 | Initial draft | welico |

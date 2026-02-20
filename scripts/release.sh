@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Release script for agent-speech-plugin
+# Release script for agent-speech-claude-code
 # This script automates the release process for the marketplace
 
 VERSION=$1
@@ -18,7 +18,7 @@ if ! [[ $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   exit 1
 fi
 
-echo "🚀 Releasing agent-speech-plugin v$VERSION"
+echo "🚀 Releasing agent-speech-claude-code v$VERSION"
 
 # Step 1: Update version in package.json
 echo "📦 Updating package.json version to $VERSION"
@@ -29,8 +29,8 @@ echo "📦 Updating .claude-plugin/marketplace.json version to $VERSION"
 sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/" .claude-plugin/marketplace.json
 
 # Step 3: Update plugin.json version
-echo "📦 Updating .claude-plugin/agent-speech-plugin/plugin.json version to $VERSION"
-sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/" .claude-plugin/agent-speech-plugin/plugin.json
+echo "📦 Updating .claude-plugin/agent-speech-claude-code/plugin.json version to $VERSION"
+sed -i '' "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/" .claude-plugin/agent-speech-claude-code/plugin.json
 
 # Step 4: Build the project
 echo "🔨 Building the project"
@@ -42,7 +42,7 @@ pnpm test
 
 # Step 6: Commit changes
 echo "💾 Committing version changes"
-git add package.json package-lock.json .claude-plugin/marketplace.json .claude-plugin/agent-speech-plugin/plugin.json
+git add package.json package-lock.json .claude-plugin/marketplace.json .claude-plugin/agent-speech-claude-code/plugin.json
 git commit -m "chore: release v$VERSION"
 
 # Step 7: Create git tag
@@ -58,10 +58,10 @@ echo ""
 echo "✅ Release v$VERSION complete!"
 echo ""
 echo "Next steps:"
-echo "1. Create a GitHub release: https://github.com/warezio/agent-speech-plugin/releases/new"
+echo "1. Create a GitHub release: https://github.com/welico/agent-speech-claude-code/releases/new"
 echo "2. Tag: v$VERSION"
 echo "3. Include the changelog"
 echo ""
 echo "To install from marketplace:"
-echo "  claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin"
-echo "  claude plugin install agent-speech-plugin"
+echo "  claude plugin marketplace add welico https://github.com/welico/agent-speech-claude-code"
+echo "  claude plugin install agent-speech-claude-code"

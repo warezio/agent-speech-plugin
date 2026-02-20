@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-15
 > **Match Rate**: 96%
 
@@ -14,7 +14,7 @@
 
 - **Feature**: Debug Environment Setup - Comprehensive debugging and testing environment for MCP server development
 - **Duration**: 2026-02-13 ~ 2026-02-15
-- **Owner**: warezio
+- **Owner**: welico
 
 ## PDCA Cycle Summary
 
@@ -144,4 +144,4 @@ all: true          // All coverage types enabled
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | 2026-02-15 | Initial completion report | warezio |
+| 1.0 | 2026-02-15 | Initial completion report | welico |

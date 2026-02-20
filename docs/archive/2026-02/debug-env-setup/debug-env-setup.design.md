@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-13
 > **Status**: Draft
 > **Planning Doc**: [debug-env-setup.plan.md](../01-plan/features/debug-env-setup.plan.md)
@@ -505,4 +505,4 @@ logger.error('Tool execution failed', error);
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-13 | Initial draft | warezio |
+| 0.1 | 2026-02-13 | Initial draft | welico |

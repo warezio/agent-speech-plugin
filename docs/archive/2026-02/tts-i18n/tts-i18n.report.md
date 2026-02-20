@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.3.0
-> **Author**: warezio
+> **Author**: welico
 > **Completion Date**: 2026-02-17
 > **PDCA Cycle**: tts-i18n
 
@@ -323,4 +323,4 @@ All 8 deviations are improvements over the design, not deficiencies.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | 2026-02-17 | Completion report created | warezio |
+| 1.0 | 2026-02-17 | Completion report created | welico |

@@ -19,7 +19,7 @@ Add the following to your `config.json`:
     "agent-speech-dev": {
       "command": "node",
       "args": [
-        "/Users/warezio/Git/GitHub/warezio/agent-speech-plugin/dist/mcp-server.js"
+        "/Users/welico/Git/GitHub/welico/agent-speech-plugin/dist/mcp-server.js"
       ],
       "env": {
         "DEBUG": "true",
@@ -30,7 +30,7 @@ Add the following to your `config.json`:
 }
 ```
 
-**Important**: Replace `/Users/warezio/Git/GitHub/warezio/agent-speech-plugin` with your actual project path.
+**Important**: Replace `/Users/welico/Git/GitHub/welico/agent-speech-plugin` with your actual project path.
 
 ### Full Example Config
 
@@ -42,7 +42,7 @@ Here's a complete example with other common settings:
     "agent-speech-dev": {
       "command": "node",
       "args": [
-        "/Users/warezio/Git/GitHub/warezio/agent-speech-plugin/dist/mcp-server.js"
+        "/Users/welico/Git/GitHub/welico/agent-speech-plugin/dist/mcp-server.js"
       ],
       "env": {
         "DEBUG": "true",
@@ -54,7 +54,7 @@ Here's a complete example with other common settings:
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/Users/warezio"
+        "/Users/welico"
       ]
     }
   }

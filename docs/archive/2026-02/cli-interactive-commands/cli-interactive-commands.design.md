@@ -324,7 +324,7 @@ src/commands/
 ### Plugin Cache Sync
 After implementation, sync updated hooks to:
 ```
-~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/.claude-plugin/
+~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/.claude-plugin/
 ```
 
 ---

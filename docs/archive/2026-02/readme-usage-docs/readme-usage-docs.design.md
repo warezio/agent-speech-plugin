@@ -4,7 +4,7 @@
 > **Project**: agent-speech-plugin
 > **Date**: 2026-02-13
 > **Status**: Design
-> **Author**: warezio
+> **Author**: welico
 > **Plan Doc**: [readme-usage-docs.plan.md](../../01-plan/features/readme-usage-docs.plan.md)
 
 ---
@@ -138,7 +138,7 @@ That's it! Claude will now use the `speak_text` tool to read responses aloud.
 
 \`\`\`bash
 # Clone the repository
-git clone https://github.com/warezio/agent-speech-plugin.git
+git clone https://github.com/welico/agent-speech-plugin.git
 cd agent-speech-plugin
 
 # Install dependencies
@@ -549,4 +549,4 @@ agent-speech set-voice Samantha  # Use exact name from list
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-13 | Initial design | warezio |
+| 0.1 | 2026-02-13 | Initial design | welico |

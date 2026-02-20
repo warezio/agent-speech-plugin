@@ -5,7 +5,7 @@ description: PDCA Act phase document (completion report)
 variables:
   - feature: agent-speech-plugin
   - date: 2026-02-12
-  - author: warezio
+  - author: welico
   - project: agent-speech-plugin
   - version: 0.1.0
 ---
@@ -16,7 +16,7 @@ variables:
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Completion Date**: 2026-02-12
 > **PDCA Cycle**: #1
 
@@ -296,4 +296,4 @@ agent-speech-plugin/
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | 2026-02-12 | Complete implementation of Agent Speech Plugin with Core + Adapter architecture, MCP server, 4 CLI adapters, and 11 CLI commands | warezio |
+| 1.0 | 2026-02-12 | Complete implementation of Agent Speech Plugin with Core + Adapter architecture, MCP server, 4 CLI adapters, and 11 CLI commands | welico |

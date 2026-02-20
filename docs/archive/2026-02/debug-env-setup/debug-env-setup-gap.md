@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-15
 > **Match Rate**: 96%
 
@@ -119,4 +119,4 @@ This document analyzes the implementation gap between the `debug-env-setup.desig
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | 2026-02-15 | Initial gap analysis | warezio |
+| 1.0 | 2026-02-15 | Initial gap analysis | welico |

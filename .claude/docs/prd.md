@@ -2,7 +2,7 @@
 
 > **Version**: 1.0
 > **Last Updated**: 2026-02-12
-> **Author**: warezio
+> **Author**: welico
 > **Status**: Draft
 
 ---
@@ -224,7 +224,7 @@ Feature: Plugin Integration
 
   Scenario: First-time setup
     Given I have Claude Code installed
-    When I install agent-speech-plugin
+    When I install agent-speech-claude-code
     And I run "agent-speech --init"
     Then a config file is created at ~/.agent-speech/config.json
     And the plugin registers with Claude Code
@@ -487,9 +487,9 @@ Global Settings (defaults for all tools)
 
 | Channel | Description | Status |
 |---------|-------------|--------|
-| **Claude Code Marketplace** | `claude plugin install agent-speech-plugin` | ✅ IMPLEMENTED |
-| **npm Registry** | `npm install agent-speech-plugin` | Planned |
-| **Homebrew** | `brew install agent-speech-plugin` | Post-MVP |
+| **Claude Code Marketplace** | `claude plugin install agent-speech-claude-code` | ✅ IMPLEMENTED |
+| **npm Registry** | `npm install agent-speech-claude-code` | Planned |
+| **Homebrew** | `brew install agent-speech-claude-code` | Post-MVP |
 | **GitHub Releases** | Binary releases for easy install | MVP |
 | **Website** | Landing page with documentation | MVP |
 
@@ -608,9 +608,9 @@ Global Settings (defaults for all tools)
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-12 | Initial PRD creation | warezio |
-| 1.0 | 2026-02-12 | Complete PRD with all sections | warezio |
-| 1.0 | 2026-02-16 | Updated to reflect marketplace distribution implementation | warezio |
+| 0.1 | 2026-02-12 | Initial PRD creation | welico |
+| 1.0 | 2026-02-12 | Complete PRD with all sections | welico |
+| 1.0 | 2026-02-16 | Updated to reflect marketplace distribution implementation | welico |
 
 ---
 
@@ -626,17 +626,17 @@ Global Settings (defaults for all tools)
 
 #### Marketplace Configuration Files Created
 - `.claude-plugin/marketplace.json` - Marketplace definition
-- `.claude-plugin/agent-speech-plugin/plugin.json` - Plugin metadata
-- `.claude-plugin/agent-speech-plugin/.mcp.json` - MCP server configuration
-- `.claude-plugin/agent-speech-plugin/README.md` - Plugin documentation
+- `.claude-plugin/agent-speech-claude-code/plugin.json` - Plugin metadata
+- `.claude-plugin/agent-speech-claude-code/.mcp.json` - MCP server configuration
+- `.claude-plugin/agent-speech-claude-code/README.md` - Plugin documentation
 
 #### Installation Commands
 ```bash
 # Add marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-claude-code
 
 # Install plugin
-claude plugin install agent-speech-plugin
+claude plugin install agent-speech-claude-code
 ```
 
 **Document Status**: Complete | **Marketplace Distribution**: Implemented ✓

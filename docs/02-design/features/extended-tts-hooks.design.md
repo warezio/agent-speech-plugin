@@ -354,12 +354,12 @@ exit 0
 | 위치 | 용도 |
 |------|------|
 | `./` (source repo) | 소스 코드 관리 |
-| `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/` | 실제 동작 위치 (현재 버전) |
-| `~/.claude/plugins/marketplaces/warezio/` | 마켓플레이스 클론 |
+| `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/` | 실제 동작 위치 (현재 버전) |
+| `~/.claude/plugins/marketplaces/welico/` | 마켓플레이스 클론 |
 
 **sync 명령어**:
 ```bash
-CACHE_DIR=~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/.claude-plugin/agent-speech-plugin/hooks
+CACHE_DIR=~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/.claude-plugin/agent-speech-plugin/hooks
 SRC_DIR=./.claude-plugin/agent-speech-plugin/hooks
 
 cp $SRC_DIR/hooks.json $CACHE_DIR/
@@ -425,4 +425,4 @@ TASK_TITLE=$(echo "$HOOK_INPUT" | jq -r '.task_title // .title // .subject // em
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-16 | Initial design | warezio |
+| 0.1 | 2026-02-16 | Initial design | welico |

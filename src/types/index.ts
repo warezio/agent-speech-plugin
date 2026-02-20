@@ -31,31 +31,25 @@ export interface TTSConfig {
 }
 
 /**
- * Tool-specific configuration (overrides global settings)
- */
-export interface ToolConfig {
-  /** Enable/disable TTS for this tool (overrides global) */
-  enabled?: boolean;
-  /** Voice name for this tool (overrides global) */
-  voice?: string;
-  /** Speech rate for this tool (overrides global) */
-  rate?: number;
-  /** Volume level for this tool (overrides global) */
-  volume?: number;
-}
-
-/**
  * Complete application configuration
  */
 export interface AppConfig {
   /** Config version for migration */
   version: string;
-  /** Global settings (defaults for all tools) */
-  global: TTSConfig;
-  /** Per-tool settings */
-  tools: {
-    [toolName: string]: ToolConfig;
-  };
+  /** Enable/disable TTS */
+  enabled: boolean;
+  /** macOS voice name (e.g., "Samantha", "Alex") */
+  voice: string;
+  /** Speech rate in words per minute (50-400) */
+  rate: number;
+  /** Volume level (0-100) */
+  volume: number;
+  /** Minimum response length to speak (0 = no minimum) */
+  minLength: number;
+  /** Maximum response length to speak (0 = no maximum) */
+  maxLength: number;
+  /** Content filtering options */
+  filters: FilterConfig;
   /** Language setting for i18n */
   language?: string;
 }
@@ -108,32 +102,4 @@ export interface VoiceInfo {
   language: string;
   /** Voice quality (Premium/Enhanced/Compact) */
   quality?: string;
-}
-
-/**
- * CLI Adapter interface
- */
-export interface CLIAdapter {
-  /** Adapter identifier */
-  readonly name: string;
-
-  /**
-   * Initialize the adapter
-   */
-  init(): Promise<void>;
-
-  /**
-   * Start the adapter (begin listening for requests)
-   */
-  start(): Promise<void>;
-
-  /**
-   * Stop the adapter
-   */
-  stop(): Promise<void>;
-
-  /**
-   * Check if adapter is enabled
-   */
-  isEnabled(): boolean;
 }

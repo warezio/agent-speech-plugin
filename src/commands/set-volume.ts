@@ -25,7 +25,7 @@ export async function cmdSetVolume(volume?: string): Promise<number> {
   const config = new ConfigManager();
   await config.init();
 
-  config.setGlobal('volume', volumeNum);
+  config.set('volume', volumeNum);
   await config.save();
 
   formatSuccess(`Volume set to ${volumeNum}`);

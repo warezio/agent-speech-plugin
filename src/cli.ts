@@ -71,11 +71,11 @@ async function main(): Promise<number> {
     case 'init':
       return await cmdInit();
     case 'enable':
-      return await cmdEnable(commandArgs[0]);
+      return await cmdEnable();
     case 'disable':
-      return await cmdDisable(commandArgs[0]);
+      return await cmdDisable();
     case 'toggle':
-      return await cmdToggle(commandArgs[0]);
+      return await cmdToggle();
     case 'status':
       return await cmdStatus();
     case 'set-voice':

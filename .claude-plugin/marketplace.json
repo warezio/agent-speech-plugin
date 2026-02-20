@@ -1,25 +1,25 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "warezio",
-  "version": "0.1.0",
-  "description": "Plugin marketplace by warezio - macOS-native tools for AI CLI development",
+  "name": "welico",
+  "version": "0.2.0",
+  "description": "Plugin marketplace by welico - macOS-native tools for AI CLI development",
   "owner": {
-    "name": "warezio",
-    "url": "https://github.com/warezio"
+    "name": "welico",
+    "url": "https://github.com/welico"
   },
   "plugins": [
     {
-      "name": "agent-speech-plugin",
-      "description": "Text-to-speech plugin for AI CLI tools using macOS native say command. Converts Claude Code responses into speech with configurable voice, rate, and volume. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.",
-      "version": "0.1.0",
+      "name": "agent-speech",
+      "description": "Text-to-speech plugin for Claude Code using macOS native say command. Converts AI responses into speech with configurable voice, rate, and volume. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.",
+      "version": "0.2.0",
       "author": {
-        "name": "warezio",
-        "url": "https://github.com/warezio"
+        "name": "welico",
+        "url": "https://github.com/welico"
       },
-      "repository": "https://github.com/warezio/agent-speech-plugin",
+      "repository": "https://github.com/welico/agent-speech-claude-code",
       "source": {
         "source": "url",
-        "url": "https://github.com/warezio/agent-speech-plugin.git"
+        "url": "https://github.com/welico/agent-speech-claude-code.git"
       },
       "category": "accessibility",
       "keywords": [
@@ -31,10 +31,9 @@
         "audio",
         "voice",
         "speech",
-        "mcp",
         "claude-code"
       ],
-      "homepage": "https://github.com/warezio/agent-speech-plugin#readme"
+      "homepage": "https://github.com/welico/agent-speech-claude-code#readme"
     }
   ]
 }

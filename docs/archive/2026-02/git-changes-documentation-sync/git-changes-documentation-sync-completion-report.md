@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 1.4.8
-> **Author**: warezio
+> **Author**: welico
 > **Completion Date**: 2026-02-16
 > **PDCA Cycle**: #2
 
@@ -20,7 +20,7 @@
 | Start Date | 2026-02-16 |
 | End Date | 2026-02-16 |
 | Duration | 1 day (estimated 2-3 hours actual effort) |
-| Owner | warezio |
+| Owner | welico |
 
 ### 1.2 Executive Summary
 
@@ -294,4 +294,4 @@ The readme-usage-docs archive at `docs/archive/2026-02/readme-usage-docs/` was v
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | 2026-02-16 | Initial completion report | warezio |
+| 1.0 | 2026-02-16 | Initial completion report | welico |

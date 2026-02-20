@@ -147,7 +147,7 @@ git push --tags
 ### 6.2 Installation Flow for Users
 ```bash
 # Add marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 
 # Install plugin
 claude plugin install agent-speech-plugin
@@ -158,9 +158,9 @@ cp config/config.example.json ~/.agent-speech/config.json
 ```
 
 ### 6.3 Deployment Locations
-- Marketplace: `~/.claude/plugins/marketplaces/warezio/`
-- Plugin cache: `~/.claude/plugins/cache/warezio/agent-speech-plugin/`
-- MCP server: `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
+- Marketplace: `~/.claude/plugins/marketplaces/welico/`
+- Plugin cache: `~/.claude/plugins/cache/welico/agent-speech-plugin/`
+- MCP server: `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
 
 ---
 

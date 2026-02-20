@@ -2,7 +2,7 @@
 
 > **Summary**: Complete implementation of Claude Code plugin marketplace distribution enabling users to discover and install the agent-speech-plugin through Claude Code's built-in marketplace system.
 >
-> **Author**: warezio
+> **Author**: welico
 > **Created**: 2026-02-15
 > **Status**: Complete
 > **Version**: v1.0
@@ -56,7 +56,7 @@ This report documents the successful completion of the marketplace-distribution 
 The marketplace distribution feature provides a complete solution for distributing the agent-speech-plugin through Claude Code's plugin marketplace. Key components include:
 
 #### Marketplace Infrastructure
-- **Marketplace Definition**: `.claude-plugin/marketplace.json` - Defines the warezio marketplace and lists available plugins
+- **Marketplace Definition**: `.claude-plugin/marketplace.json` - Defines the welico marketplace and lists available plugins
 - **Plugin Metadata**: `.claude-plugin/agent-speech-plugin/plugin.json` - Plugin configuration including MCP server setup
 - **MCP Configuration**: `.claude-plugin/agent-speech-plugin/.mcp.json` - MCP server command configuration
 - **Plugin Documentation**: `.claude-plugin/agent-speech-plugin/README.md` - User-facing documentation
@@ -135,7 +135,7 @@ The implementation integrates seamlessly with Claude Code's plugin ecosystem:
 
 ```bash
 # Step 1: Add marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 
 # Step 2: Install plugin
 claude plugin install agent-speech-plugin
@@ -164,9 +164,9 @@ Repository Structure:
 ### 4.3 Installation Flow
 
 1. **Discovery**: User runs `claude plugin` command → marketplace search
-2. **Marketplace Addition**: Repository cloned to `~/.claude/plugins/marketplaces/warezio/`
-3. **Plugin Installation**: Plugin cached to `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/`
-4. **MCP Registration**: Server path registered as `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
+2. **Marketplace Addition**: Repository cloned to `~/.claude/plugins/marketplaces/welico/`
+3. **Plugin Installation**: Plugin cached to `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/`
+4. **MCP Registration**: Server path registered as `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
 5. **Operation**: TTS functionality available through Claude Code MCP tools
 
 ---
@@ -196,9 +196,9 @@ Keep these versions synchronized:
 
 ### 5.3 Deployment Locations
 
-- **Marketplace**: `~/.claude/plugins/marketplaces/warezio/`
-- **Plugin Cache**: `~/.claude/plugins/cache/warezio/agent-speech-plugin/`
-- **MCP Server**: `~/.claude/plugins/cache/warezio/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
+- **Marketplace**: `~/.claude/plugins/marketplaces/welico/`
+- **Plugin Cache**: `~/.claude/plugins/cache/welico/agent-speech-plugin/`
+- **MCP Server**: `~/.claude/plugins/cache/welico/agent-speech-plugin/v0.1.0/dist/mcp-server.js`
 
 ---
 
@@ -210,7 +210,7 @@ For users who want to get started immediately:
 
 ```bash
 # Install from marketplace
-claude plugin marketplace add warezio https://github.com/warezio/agent-speech-plugin
+claude plugin marketplace add welico https://github.com/welico/agent-speech-plugin
 claude plugin install agent-speech-plugin
 
 # Configure (optional)
@@ -267,7 +267,7 @@ For maintainers and contributors:
 #### Development Setup
 ```bash
 # Clone and build
-git clone https://github.com/warezio/agent-speech-plugin.git
+git clone https://github.com/welico/agent-speech-plugin.git
 cd agent-speech-plugin
 pnpm install
 pnpm build
@@ -523,12 +523,12 @@ The marketplace-distribution feature marks a significant milestone in making the
 ```json
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "warezio",
+  "name": "welico",
   "version": "0.1.0",
-  "description": "Plugin marketplace by warezio",
+  "description": "Plugin marketplace by welico",
   "owner": {
-    "name": "warezio",
-    "url": "https://github.com/warezio"
+    "name": "welico",
+    "url": "https://github.com/welico"
   },
   "plugins": [/* plugin definitions */]
 }

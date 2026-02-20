@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.3.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Status**: Draft
 
@@ -292,7 +292,7 @@ exit 0
 7. Update `stop-hook.sh`
 8. Update `config.example.json` (hooks/) — add `"language": "ko"`
 9. Update `~/.agent-speech/config.json` — add `"language": "ko"`
-10. Sync to plugin cache (`~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/`)
+10. Sync to plugin cache (`~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/`)
 11. Verify translations end-to-end
 
 ---

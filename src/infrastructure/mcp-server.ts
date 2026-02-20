@@ -167,13 +167,19 @@ export class MCPServer {
       const input = validation.data;
       this.logger.debug('Parsed input', { text: input.text, length: input.text.length });
 
-      // Get tool config (claude-code tool config)
-      const toolConfig = this.config.getToolConfig('claude-code');
-      this.logger.debug('Tool config', toolConfig);
+      // Get current config
+      const currentConfig = this.config.getAll();
+      this.logger.debug('Current config', currentConfig);
 
       // Merge input overrides with config
       const config = {
-        ...toolConfig,
+        enabled: currentConfig.enabled,
+        voice: currentConfig.voice,
+        rate: currentConfig.rate,
+        volume: currentConfig.volume,
+        minLength: currentConfig.minLength,
+        maxLength: currentConfig.maxLength,
+        filters: currentConfig.filters,
         ...(input.voice && { voice: input.voice }),
         ...(input.rate && { rate: input.rate }),
         ...(input.volume !== undefined && { volume: input.volume }),

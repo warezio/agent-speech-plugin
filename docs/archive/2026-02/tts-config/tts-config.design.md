@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.2.0
-> **Author**: warezio
+> **Author**: welico
 > **Date**: 2026-02-16
 > **Status**: Draft
 > **Plan Reference**: `docs/01-plan/features/tts-config.plan.md`
@@ -35,7 +35,7 @@ All 5 hook scripts currently hardcode `Samantha` voice at 200 wpm. This design i
 
 Sync locations (all 3 must match):
 - Source: `.claude-plugin/agent-speech-plugin/hooks/`
-- Cache: `~/.claude/plugins/cache/warezio/agent-speech-plugin/0.1.0/.claude-plugin/agent-speech-plugin/hooks/`
+- Cache: `~/.claude/plugins/cache/welico/agent-speech-plugin/0.1.0/.claude-plugin/agent-speech-plugin/hooks/`
 - User config: `~/.agent-speech/config.json` (runtime, not in repo)
 
 ---

@@ -1,29 +1,21 @@
 /**
- * Disable TTS for a tool command
+ * Disable TTS command
  */
 
 import { ConfigManager } from '../core/config.js';
 import { formatSuccess } from '../utils/format.js';
 
 /**
- * Supported tools
- */
-const TOOLS = ['claude-code', 'opencode', 'codex-cli', 'gemini-cli'] as const;
-type Tool = (typeof TOOLS)[number];
-
-/**
- * Disable TTS for a tool
- * @param tool - Tool name (default: claude-code)
+ * Disable TTS
  * @returns Exit code (0 = success)
  */
-export async function cmdDisable(tool?: string): Promise<number> {
+export async function cmdDisable(): Promise<number> {
   const config = new ConfigManager();
   await config.init();
 
-  const toolName = (tool || 'claude-code') as Tool;
-  config.setToolEnabled(toolName, false);
+  config.set('enabled', false);
   await config.save();
 
-  formatSuccess(`TTS disabled for ${toolName}`);
+  formatSuccess('TTS disabled');
   return 0;
 }

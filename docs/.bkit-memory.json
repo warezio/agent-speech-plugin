@@ -1,11 +1,17 @@
 {
-  "sessionCount": 32,
+  "sessionCount": 35,
   "lastSession": {
-    "startedAt": "2026-02-17T22:07:47.744Z",
+    "startedAt": "2026-02-20T17:56:11.394Z",
     "platform": "claude",
     "level": "Dynamic"
   },
   "activeFeatures": [
-    "git-changes-documentation-sync"
-  ]
+    "claude-code-refactoring"
+  ],
+  "currentPhase": "check",
+  "lastAnalysis": {
+    "feature": "claude-code-refactoring",
+    "matchRate": 92,
+    "date": "2026-02-20"
+  }
 }
