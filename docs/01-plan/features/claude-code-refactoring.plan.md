@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: welico
+> **Author**: warezio
 > **Date**: 2026-02-20
 > **Status**: Draft
 
@@ -31,7 +31,7 @@ The original design envisioned agent-speech-plugin as a universal TTS solution f
 - Configuration structure supports per-tool settings (unused)
 
 **New Naming Convention:**
-- **Marketplace**: `welico` (unchanged - marketplace identity)
+- **Marketplace**: `warezio` (unchanged - marketplace identity)
 - **Plugin**: `agent-speech` (simplified from `agent-speech-plugin`)
 
 ### 1.3 Related Documents
@@ -225,4 +225,4 @@ Not applicable - This is a refactoring of existing Starter-level project, not a 
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-20 | Initial draft | welico |
+| 0.1 | 2026-02-20 | Initial draft | warezio |

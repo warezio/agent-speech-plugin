@@ -1,5 +1,5 @@
 {
-  "name": "agent-speech",
+  "name": "agent-speech-plugin",
   "version": "0.2.0",
   "description": "Claude Code text-to-speech plugin using macOS native say command",
   "type": "module",
@@ -36,7 +36,7 @@
     "say",
     "accessibility"
   ],
-  "author": "welico",
+  "author": "warezio",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"

@@ -1,11 +1,11 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "welico",
+  "name": "warezio",
   "version": "0.2.0",
-  "description": "Plugin marketplace by welico - macOS-native tools for AI CLI development",
+  "description": "Plugin marketplace by warezio - macOS-native tools for AI CLI development",
   "owner": {
-    "name": "welico",
-    "url": "https://github.com/welico"
+    "name": "warezio",
+    "url": "https://github.com/warezio"
   },
   "plugins": [
     {
@@ -13,13 +13,13 @@
       "description": "Text-to-speech plugin for Claude Code using macOS native say command. Converts AI responses into speech with configurable voice, rate, and volume. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.",
       "version": "0.2.0",
       "author": {
-        "name": "welico",
-        "url": "https://github.com/welico"
+        "name": "warezio",
+        "url": "https://github.com/warezio"
       },
-      "repository": "https://github.com/welico/agent-speech-claude-code",
+      "repository": "https://github.com/warezio/agent-speech-plugin",
       "source": {
         "source": "url",
-        "url": "https://github.com/welico/agent-speech-claude-code.git"
+        "url": "https://github.com/warezio/agent-speech-plugin.git"
       },
       "category": "accessibility",
       "keywords": [
@@ -33,7 +33,7 @@
         "speech",
         "claude-code"
       ],
-      "homepage": "https://github.com/welico/agent-speech-claude-code#readme"
+      "homepage": "https://github.com/warezio/agent-speech-plugin#readme"
     }
   ]
 }

@@ -11,13 +11,13 @@
 
 ## 1. Problem Statement
 
-Current marketplace name "welico" needs to be updated to "agent-speech-marketplace" to better reflect the project's purpose and improve brand consistency across all marketplace-related references in the codebase.
+Current marketplace name "warezio" needs to be updated to "agent-speech-marketplace" to better reflect the project's purpose and improve brand consistency across all marketplace-related references in the codebase.
 
 ---
 
 ## 2. Current State Analysis
 
-After comprehensive search, I identified **47 files** containing "welico" references, with **14 files** specifically containing marketplace-related GitHub URLs and configurations.
+After comprehensive search, I identified **47 files** containing "warezio" references, with **14 files** specifically containing marketplace-related GitHub URLs and configurations.
 
 ### Key Files Requiring Updates:
 
@@ -48,18 +48,18 @@ After comprehensive search, I identified **47 files** containing "welico" refere
 #### 3.1 `.claude-plugin/marketplace.json`
 ```json
 {
-  "name": "welico" → "agent-speech-marketplace",
-  "description": "Plugin marketplace by welico" → "Plugin marketplace by agent-speech-marketplace",
+  "name": "warezio" → "agent-speech-marketplace",
+  "description": "Plugin marketplace by warezio" → "Plugin marketplace by agent-speech-marketplace",
   "owner": {
-    "name": "welico" → "agent-speech-marketplace",
-    "url": "https://github.com/welico" → "https://github.com/welico/agent-speech-marketplace"
+    "name": "warezio" → "agent-speech-marketplace",
+    "url": "https://github.com/warezio" → "https://github.com/warezio/agent-speech-marketplace"
   },
   "plugins": [{
     "author": {
-      "name": "welico" → "agent-speech-marketplace",
-      "url": "https://github.com/welico" → "https://github.com/welico/agent-speech-marketplace"
+      "name": "warezio" → "agent-speech-marketplace",
+      "url": "https://github.com/warezio" → "https://github.com/warezio/agent-speech-marketplace"
     },
-    "repository": "https://github.com/welico/agent-speech-plugin" → "https://github.com/welico/agent-speech-marketplace/agent-speech-plugin"
+    "repository": "https://github.com/warezio/agent-speech-plugin" → "https://github.com/warezio/agent-speech-marketplace/agent-speech-plugin"
   }]
 }
 ```
@@ -68,20 +68,20 @@ After comprehensive search, I identified **47 files** containing "welico" refere
 ```json
 {
   "author": {
-    "name": "welico" → "agent-speech-marketplace",
-    "email": "welico@users.noreply.github.com" → "marketplace@agent-speech-marketplace.com",
-    "url": "https://github.com/welico" → "https://github.com/welico/agent-speech-marketplace"
+    "name": "warezio" → "agent-speech-marketplace",
+    "email": "warezio@users.noreply.github.com" → "marketplace@agent-speech-marketplace.com",
+    "url": "https://github.com/warezio" → "https://github.com/warezio/agent-speech-marketplace"
   },
-  "repository": "https://github.com/welico/agent-speech-plugin" → "https://github.com/welico/agent-speech-marketplace/agent-speech-plugin",
-  "homepage": "https://github.com/welico/agent-speech-plugin#readme" → "https://github.com/welico/agent-speech-marketplace/agent-speech-plugin#readme"
+  "repository": "https://github.com/warezio/agent-speech-plugin" → "https://github.com/warezio/agent-speech-marketplace/agent-speech-plugin",
+  "homepage": "https://github.com/warezio/agent-speech-plugin#readme" → "https://github.com/warezio/agent-speech-marketplace/agent-speech-plugin#readme"
 }
 ```
 
 #### 3.3 `README.md`
-- Update Repository URL from `https://github.com/welico/agent-speech-plugin` to `https://github.com/welico/agent-speech-marketplace/agent-speech-plugin`
+- Update Repository URL from `https://github.com/warezio/agent-speech-plugin` to `https://github.com/warezio/agent-speech-marketplace/agent-speech-plugin`
 - Update marketplace installation commands:
   ```bash
-  claude plugin marketplace add welico → claude plugin marketplace add agent-speech-marketplace
+  claude plugin marketplace add warezio → claude plugin marketplace add agent-speech-marketplace
   ```
 
 #### 3.4 `docs/marketplace-setup.md`
@@ -102,13 +102,13 @@ After comprehensive search, I identified **47 files** containing "welico" refere
 1. **Bulk Find-and-Replace Operations**
    ```bash
    # Update marketplace.json
-   sed -i '' 's/"name": "welico"/"name": "agent-speech-marketplace"/g' .claude-plugin/marketplace.json
-   sed -i '' 's/Plugin marketplace by welico/Plugin marketplace by agent-speech-marketplace/g' .claude-plugin/marketplace.json
-   sed -i '' 's/"name": "welico"/"name": "agent-speech-marketplace"/g' .claude-plugin/marketplace.json
+   sed -i '' 's/"name": "warezio"/"name": "agent-speech-marketplace"/g' .claude-plugin/marketplace.json
+   sed -i '' 's/Plugin marketplace by warezio/Plugin marketplace by agent-speech-marketplace/g' .claude-plugin/marketplace.json
+   sed -i '' 's/"name": "warezio"/"name": "agent-speech-marketplace"/g' .claude-plugin/marketplace.json
 
    # Update plugin.json
-   sed -i '' 's/"name": "welico"/"name": "agent-speech-marketplace"/g' .claude-plugin/agent-speech-plugin/plugin.json
-   sed -i '' 's/welico@users.noreply.github.com/marketplace@agent-speech-marketplace.com/g' .claude-plugin/agent-speech-plugin/plugin.json
+   sed -i '' 's/"name": "warezio"/"name": "agent-speech-marketplace"/g' .claude-plugin/agent-speech-plugin/plugin.json
+   sed -i '' 's/warezio@users.noreply.github.com/marketplace@agent-speech-marketplace.com/g' .claude-plugin/agent-speech-plugin/plugin.json
    ```
 
 2. **Manual URL Updates**
@@ -146,9 +146,9 @@ git add .
 git commit -m "backup: Pre-marketplace name update"
 
 # List all references
-grep -r "welico" .claude-plugin/
-grep -r "github.com/welico" docs/
-grep -r "claude plugin marketplace add welico" .
+grep -r "warezio" .claude-plugin/
+grep -r "github.com/warezio" docs/
+grep -r "claude plugin marketplace add warezio" .
 ```
 
 ### Post-Update Verification

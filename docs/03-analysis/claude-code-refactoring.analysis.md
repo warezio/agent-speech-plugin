@@ -180,7 +180,7 @@ total 0
 # ✅ Directory exists but is empty (all files deleted)
 
 $ ls -la src/claude-code.ts
--rw-r--r--  1 welico  staff  1151 Feb 20 12:59 claude-code.ts
+-rw-r--r--  1 warezio  staff  1151 Feb 20 12:59 claude-code.ts
 # ✅ File successfully moved to src root
 ```
 

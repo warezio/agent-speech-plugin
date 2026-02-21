@@ -4,7 +4,7 @@
 >
 > **Project**: agent-speech-plugin
 > **Version**: 0.1.0
-> **Author**: welico
+> **Author**: warezio
 > **Date**: 2026-02-20
 > **Status**: Draft
 > **Planning Doc**: [claude-code-refactoring.plan.md](../01-plan/features/claude-code-refactoring.plan.md)
@@ -338,8 +338,8 @@ export interface AppConfig { /* ... simplified ... */ }
   "description": "Text-to-speech plugin for Claude Code using macOS native say command. Converts AI responses into speech with configurable voice, rate, and volume. Perfect for developers who prefer listening to long responses or want audio confirmation while multitasking.",
   "version": "0.2.0",
   "author": {
-    "name": "welico",
-    "url": "https://github.com/welico"
+    "name": "warezio",
+    "url": "https://github.com/warezio"
   },
   "keywords": [
     "tts",
@@ -360,7 +360,7 @@ export interface AppConfig { /* ... simplified ... */ }
 **.claude-plugin/marketplace.json:**
 ```json
 {
-  "name": "welico",
+  "name": "warezio",
   "plugins": [
     {
       "name": "agent-speech",
@@ -619,4 +619,4 @@ git branch -D feat/claude-code-specific-refactoring
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 0.1 | 2026-02-20 | Initial design | welico |
+| 0.1 | 2026-02-20 | Initial design | warezio |
